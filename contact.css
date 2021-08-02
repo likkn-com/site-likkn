@@ -1,0 +1,226 @@
+:root {
+  --first-color: #2f8a41;
+  --input-color: gray;
+  --border-color: lightgray;
+}
+
+ 
+*,::before,::after {
+  box-sizing: border-box;
+}
+
+.contact-container {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  border-radius: 1rem;
+}
+
+.form {
+  padding: 20px 20px;
+  /* width: 500px;
+  padding: 4rem 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 10px 25px rgba(92,99,105,.2); */
+}
+
+.form-div {
+  position: relative;
+  height: 3rem;
+  margin-bottom: 1.5rem;
+}
+
+.form-text-div {
+  position: relative;
+  height: 8rem;
+  margin-bottom: 1.5rem;
+}
+
+.form-input, .text-input {
+  position: absolute;
+  resize: none;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  font-size: var(--normal-font-size);
+  border: 1px solid var(--border-color);
+  border-radius: .25rem;
+  outline: none;
+  padding: 1rem;
+  background: none;
+  z-index: 1;
+}
+
+.form-label, .text-label  {
+  position: absolute;
+  left: 0.75rem;
+  top: 0.4rem;
+  padding: 0.5rem;
+  background-color: white;
+  color: var(--input-color);
+  font-size: 1rem;
+  transition: .3s; 
+}
+
+.form-input:focus + .form-label {
+  top:-1rem;
+  left:.8rem;
+  color:var(--first-color);
+  font-size: 0.75rem;
+  font-weight: 500;
+  z-index: 10;
+}
+
+.text-input:focus + .text-label {
+  top:-1rem;
+  left:.8rem;
+  color:var(--first-color);
+  font-size: 0.75rem;
+  font-weight: 500;
+  z-index: 10;
+}
+
+.form-input:not(:placeholder-shown).form-input:not(:focus)+ .form-label {
+  top:-1rem;
+  left:.8rem;
+  color:var(--first-color);
+  font-size: 0.75rem;
+  font-weight: 500;
+  z-index: 10;
+}
+
+.text-input:not(:placeholder-shown).text-input:not(:focus)+ .text-label {
+  top:-1rem;
+  left:.8rem;
+  color:var(--first-color);
+  font-size: 0.75rem;
+  font-weight: 500;
+  z-index: 10;
+}
+
+.form-input:focus, .text-input:focus {
+  border:1.5px solid var(--first-color);
+}
+
+.contact-send-button {
+  position: relative;
+  display: inline-block;
+  box-sizing: border-box;
+  border: none;
+  border-radius: 4px;
+  padding: 0 16px;
+  min-width: 8rem;
+  height: 36px;
+  vertical-align: middle;
+  text-align: center;
+  text-overflow: ellipsis;
+  text-transform: uppercase;
+  color: rgb(var(--pure-material-onprimary-rgb, 255, 255, 255));
+  background-color: rgb(var(--pure-material-primary-rgb, 31, 155, 215));
+  box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+  font-family: var(--pure-material-font, "Roboto", "Segoe UI", BlinkMacSystemFont, system-ui, -apple-system);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 36px;
+  overflow: hidden;
+  outline: none;
+  cursor: pointer;
+  transition: box-shadow 0.2s;
+}
+
+.contact-send-button::-moz-focus-inner {
+  border: none;
+}
+
+/* Overlay */
+.contact-send-button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgb(var(--pure-material-onprimary-rgb, 255, 255, 255));
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+/* Ripple */
+.contact-send-button::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  border-radius: 50%;
+  padding: 50%;
+  width: 32px; /* Safari */
+  height: 32px; /* Safari */
+  background-color: rgb(var(--pure-material-onprimary-rgb, 255, 255, 255));
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(1);
+  transition: opacity 1s, transform 0.5s;
+}
+
+/* Hover, Focus */
+.contact-send-button:hover,
+.contact-send-button:focus {
+  box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.2), 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12);
+}
+
+.contact-send-button:hover::before {
+  opacity: 0.08;
+}
+
+.contact-send-button:focus::before {
+  opacity: 0.24;
+}
+
+.contact-send-button:hover:focus::before {
+  opacity: 0.3;
+}
+
+/* Active */
+.contact-send-button:active {
+  box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2), 0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12);
+}
+
+.contact-send-button:active::after {
+  opacity: 0.32;
+  transform: translate(-50%, -50%) scale(0);
+  transition: transform 0s;
+}
+
+/* Disabled */
+.contact-send-button:disabled {
+  color: rgba(var(--pure-material-onsurface-rgb, 0, 0, 0), 0.38);
+  background-color: rgba(var(--pure-material-onsurface-rgb, 0, 0, 0), 0.12);
+  box-shadow: none;
+  cursor: initial;
+}
+
+.contact-send-button:disabled::before {
+  opacity: 0;
+}
+
+.contact-send-button:disabled::after {
+  opacity: 0;
+}
+
+
+
+
+@media screen and (min-width: 58em) {
+.contact-container {
+  max-width: 1240px;
+}
+
+/* .contact-send-button {
+  text-decoration: none;
+  border-style: none;
+  width: 15rem;
+  height: 3rem;
+  font-weight: 500;
+} */
+
+}
