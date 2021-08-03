@@ -7,6 +7,14 @@ h1 {
   margin: 0;
 }
 
+.link-inline {
+  display: inline-block;
+}
+
+.link-inline:last-child {
+  margin-left: 13px;
+}
+
 div.text-4 h1, div.text-5 h1 {
   padding-left: 20px;
 }
@@ -480,10 +488,10 @@ div.text-7 p {
 
 .link {
   cursor: pointer;
-  background: linear-gradient(180deg, transparent, #1f9bd7 0);
+  background: linear-gradient(180deg, transparent, red 0);
   background-color: rgba(0, 0, 0, 0);
   background-attachment: scroll;
-  background-image: linear-gradient(transparent, rgb(31,155,215) 0px);
+  background-image: linear-gradient(transparent, rgb(255,0,0) 0px);
   background-origin: padding-box;
   background-clip: border-box;
   background-position: bottom;
@@ -506,7 +514,8 @@ div.text-7 p {
   -webkit-text-stroke-color: transparent;
   text-rendering: optimizeLegibility;
   line-height: 155%;
-  font-size: 1.05rem;
+  /* font-size: 1.05rem; */
+  font-size: inherit;
 }
 
 .link, .link:visited, .link:active, .link:hover {

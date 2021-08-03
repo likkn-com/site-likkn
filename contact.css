@@ -4,6 +4,13 @@
   --border-color: lightgray;
 }
 
+p {
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+  margin: 0;
+}
+
  
 *,::before,::after {
   box-sizing: border-box;
