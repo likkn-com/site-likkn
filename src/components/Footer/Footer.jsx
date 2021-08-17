@@ -10,37 +10,54 @@ const useStyles = makeStyles(() =>
         textDecoration: 'none',
         color: '#fff',
     },
+    internal:{
+      '& > *': {
+          margin: 0,
+          padding: 0,
+      },
+      width: '80%',
+      display: 'flex',
+      position: 'relative',
+      left: '50%',
+      transform: 'translate(-50%)',
+    },
+    external:{
+        background: "#172A3A",
+    }
   }),
 );
 
 const Footer: React.FC = () => {
     const classes = useStyles();
   return (
-    <Box
-        color = "white"
-        fontFamily = "Montserrat"
-        display="flex"
-        fontSize = "78%"
-        alignItems="center"
-        justifyContent="center"
-        flexGrow={1}
-        p={1}
-        m={1}
-        bgcolor="#172A3A"
-        sx={{ height: 50 }}
-    >
-        <Box p={1} order={2}>
-            <a 
-                className={classes.link}
-                target="_blank"
-                href={termos} rel="noreferrer">
-                    Política de Privacidade
-            </a> 
+    <div className={classes.external}>
+      <div  className={classes.internal}>
+        <Box
+            color = "white"
+            fontFamily = "Montserrat"
+            display="flex"
+            fontSize = "72%"
+            alignItems="center"
+            justifyContent="center"
+            flexGrow={1}
+            p={1}
+            m={1}
+            bgcolor="#172A3A"
+            sx={{ height: 50 }}
+        >
+            <Box p={1} order={2}>
+                <a 
+                    className={classes.link}
+                    target="_blank"
+                    href={termos} rel="noreferrer">
+                        Política de Privacidade
+                </a> 
+            </Box>
+            <Box order={3}> - </Box>
+            <Box p={1} order={4}> Likkn.com</Box>
         </Box>
-        <Box order={3}> - </Box>
-        <Box p={1} order={4}> Likkn.com @2021 </Box>
-    </Box>
-
+      </div>
+    </div>
   );
 }
 
