@@ -9,7 +9,6 @@ function App() {
        <Switch>
         <Route path="/home" exact component={Home}/>
         <Route path="/interno" exact component={Interno}/>
-
         <Redirect to="/home"/>
        </Switch>
     </BrowserRouter>
