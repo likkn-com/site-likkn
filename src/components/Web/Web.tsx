@@ -2,16 +2,14 @@ import React from 'react';
 import Footer from '../Footer/Footer';
 import Header from '../Header/Header';
 
-// import { Container } from './styles';
-
-const Interno: React.FC = () => {
+const Web: React.FC = () => {
   return (
       <div>
-          <Header page={2} />
-          pagina interno
+          <Header page={5} />
+          pagina web
           <Footer/>
       </div>
   );
 }
 
-export default Interno;
+export default Web;

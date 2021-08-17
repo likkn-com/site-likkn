@@ -2,8 +2,9 @@ import React from 'react';
 import Header from '../Header/Header';
 
 import { makeStyles, createStyles, Theme } from '@material-ui/core/styles';
-import Button from '@material-ui/core/Button';
 import Footer from '../Footer/Footer';
+import Body from '../Body/Body';
+import Contacts from '../Contacts/Contacts';
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -24,13 +25,10 @@ const Home: React.FC = () => {
 
   return (
    <div className={classes.root}>
-        <Header titulo="HOME" />
-
-        <div className={classes.teste}> AAAAAA </div>
-
-        <Button variant="contained" color="primary"> Primary </Button>
-
-      <Footer/>
+        <Header page={1} />
+        <Body/>
+        <Contacts/>
+        <Footer/>
       
     </div>
   );
