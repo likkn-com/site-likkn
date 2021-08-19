@@ -8,7 +8,6 @@ import DialogActions from '@material-ui/core/DialogActions';
 import DialogContent from '@material-ui/core/DialogContent';
 import DialogTitle from '@material-ui/core/DialogTitle';
 import Icon from '@material-ui/core/Icon';
-import Input from '@material-ui/core/Input';
 import TextField from '@material-ui/core/TextField';
 
 const useStyles = makeStyles((theme: Theme) =>
@@ -80,11 +79,11 @@ const Contacts: React.FC = () => {
     setOpen(false);
   };
 
-  function changeSubject(e) {
+  function changeSubject(e: any) {
     setSubject(e.target.value);
   }
 
-  function changeContent(e) {
+  function changeContent(e: any) {
     setContent(e.target.value);
   }
 

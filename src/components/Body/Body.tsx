@@ -28,7 +28,7 @@ const useStyles = makeStyles(() =>
   }),
 );
 
-const Body = () => {
+const Body: React.FC = () => {
     const classes = useStyles();
   return (
       <div className={classes.root}>

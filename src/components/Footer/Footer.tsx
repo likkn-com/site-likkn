@@ -3,7 +3,6 @@ import Box from '@material-ui/core/Box';
 import termos from "../../assets/documents/Termos-de-Uso-e-Politica-de-Privacidade.pdf"
 import Tooltip from '@material-ui/core/Tooltip';
 import { makeStyles, createStyles } from '@material-ui/core/styles';
-
 const useStyles = makeStyles(() =>
   createStyles({
     link: {
