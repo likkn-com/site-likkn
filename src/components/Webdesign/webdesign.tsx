@@ -1,58 +1,58 @@
 import React from "react";
+import { makeStyles } from '@material-ui/core/styles';
+import Card from '@material-ui/core/Card';
+import CardActionArea from '@material-ui/core/CardActionArea';
+import CardContent from '@material-ui/core/CardContent';
+import CardMedia from '@material-ui/core/CardMedia';
+import Typography from '@material-ui/core/Typography';
 import web_development_img from "../../assets/images/web-development.png";
-import { makeStyles, createStyles } from "@material-ui/core/styles";
+import { Grid } from "@material-ui/core";
 
-const useStyles = makeStyles(() =>
-  createStyles({
-    root: {
-      display: "flex",
-      flexDirection: "column",
-      maxWidth: "1060px",
-      width: "100%",
-      height: "auto",
-      marginLeft: "auto",
-      marginRight: "auto",
-      background: "#F2F7FA",
-    },
-    img: {
-      maxWidth: "1060px",
-      width: "100%",
-      height: "auto",
-    },
-    h1: {
-      margin: "0",
-      paddingLeft: "20px",
-      paddingTop: "20px",
-      fontFamily: "Montserrat",
-      fontStyle: "normal",
-      fontWeight: "bold",
-      fontSize: "26px",
-      color: "#172A3A",
-    },
-    p: {
-      padding: "0px 20px",
-      fontFamily: "Montserrat",
-      fontStyle: "normal",
-      fontWeight: "normal",
-      fontSize: "14px",
-      lineHeight: "150%",
-      textAlign: "left",
-      color: "#000000",
-    },
-  })
-);
+// import { makeStyles, createStyles } from "@material-ui/core/styles";
+
+const useStyles = makeStyles({
+  root: {
+    // maxWidth: 1060,
+    width: 380,
+    background: '#F2F7FA',
+  },
+  media: {
+    height: 280,
+  },
+  grid: {
+    paddingLeft: 10,
+    paddingRight: 10,
+    paddingTop: 10,
+  }
+});
+
+// import { Container } from './styles';
 
 const Webdesign: React.FC = () => {
+  
   const classes = useStyles();
+   
   return (
-    <div className={classes.root}>
-      <h1 className={classes.h1}>Desenvolvimento Web</h1>
-      <img className={classes.img} src={web_development_img} alt="" />
-      <p className={classes.p}>
-      Nossos desenvolvedores altamente qualificados utilizam as mais modernas tecnologias do mercado para desenvolvimento de sites customizados para o seu negócio. Solicite um orçamento sem compromisso.
-      </p>
-    </div>
+    <Grid container className={classes.grid} direction="row" justifyContent="center" alignItems="center">
+    <Card className={classes.root}>
+      <CardActionArea>
+        <CardMedia
+          className={classes.media}
+          image={web_development_img}
+          title="Desenvolvimento Web"
+        />
+        <CardContent>
+          <Typography gutterBottom variant="h5" component="h2">
+            Desenvolvimento Web
+          </Typography>
+          <Typography variant="body2" color="textSecondary" component="p">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur aliquam possimus doloribus provident doloremque a in pariatur ex unde, non animi eaque nobis repudiandae praesentium voluptatum enim. Unde, temporibus ullam.
+          </Typography>
+        </CardContent>
+      </CardActionArea>
+    </Card>
+    </Grid>
   );
-};
+}
 
 export default Webdesign;
