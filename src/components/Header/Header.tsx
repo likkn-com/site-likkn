@@ -1,6 +1,6 @@
 import React from 'react';
 import Box from '@material-ui/core/Box';
-import logoCompleto from "../../assets/image/iconCV2.png"
+import logoCompleto from "../../assets/images/iconCV2.png"
 import { makeStyles, createStyles } from '@material-ui/core/styles';
 
 /*menu*/
