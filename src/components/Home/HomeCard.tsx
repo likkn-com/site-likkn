@@ -18,6 +18,7 @@ const useStyles = makeStyles({
   root: {
     minWidth: 275,
     maxWidth: 300,
+    minHeight: 700,
     borderRadius: '15px',
   },
   img:{
@@ -27,6 +28,12 @@ const useStyles = makeStyles({
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
+  },
+  boxIcon:{
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    
   },
   imgBoxBC:{
     background: 'linear-gradient( 160deg, #a5cceb, hsla(50, 50%, 95%, 50))',
@@ -47,14 +54,14 @@ const useStyles = makeStyles({
   },
   textDesc:{
     background: '#ffffff',
-    textAlign:'left',
+    textAlign:'justify',
     fontFamily: 'Montserrat',
     fontSize: '100%',
     fontWeight: 'bold',
   },
   icon:{
     color: '#0e76a8',
-    fontSize: '50px'
+    fontSize: '50px',
   },
   link:{
     textDecoration: 'none',
@@ -86,7 +93,10 @@ const HomeCard: React.FC<HomeCardProps> = ({ desc, img, name, office, link }, Ho
 
         <Typography variant="h6" className={classes.textDesc}>
           {desc}
-          <div className={classes.box}>
+          <br/><br/>
+        </Typography>
+
+        <div className={classes.boxIcon}>
             <a
               className={classes.link}
               target="_blank"
@@ -94,9 +104,6 @@ const HomeCard: React.FC<HomeCardProps> = ({ desc, img, name, office, link }, Ho
               <LinkedInIcon className={classes.icon}/>
             </a>
           </div>
-
-        </Typography>
-
         </CardContent>
 
     </Card>
