@@ -62,7 +62,7 @@ const useStyles = makeStyles(() =>
                 margin: 0,
                 padding: 0,
             },
-            width: '80%',
+            width: '65%',
             display: 'flex',
             position: 'relative',
             left: '50%',
