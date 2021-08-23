@@ -99,6 +99,7 @@ const Contacts: React.FC = () => {
     setContent(e.target.value);
   }
 
+  //comercial@likkn.com
   var email = 'mailto:erickeescagion@gmail.com?subject=' + subject + '&body=' + content;
   return (
     <div className={classes.root}>

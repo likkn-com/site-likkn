@@ -55,10 +55,11 @@ const useStyles = makeStyles({
   },
   textDesc: {
     background: '#ffffff',
-    textAlign: 'justify',
+    textAlign: 'left',
     fontSize: '100%',
     fontFamily: 'montserrat',
     fontWeight: 'bold',
+    minHeight: '340px',
   },
   icon: {
     color: '#0e76a8',

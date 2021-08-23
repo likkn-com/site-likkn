@@ -1,14 +1,21 @@
 import React from 'react';
+import Contacts from '../Contacts/Contacts';
 import Footer from '../Footer/Footer';
 import Header from '../Header/Header';
-
-// import { Container } from './styles';
+import Content from './Content';
+import HeaderInterno from './HeaderInterno';
+import MediaPlayer from './MediaPlayer';
+import Templates from './Templates';
 
 const Interno: React.FC = () => {
   return (
       <div>
+          <Contacts/>
           <Header page={2} />
-          pagina interno
+          <HeaderInterno/>
+          <MediaPlayer/>
+          <Content/>
+          <Templates/>
           <Footer/>
       </div>
   );
