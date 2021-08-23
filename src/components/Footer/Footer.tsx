@@ -7,7 +7,7 @@ import Dialog from '@material-ui/core/Dialog';
 import DialogContent from '@material-ui/core/DialogContent';
 import DialogTitle from '@material-ui/core/DialogTitle';
 import Button from '@material-ui/core/Button';
-import { Tooltip } from '@material-ui/core';
+import { Tooltip, Typography } from '@material-ui/core';
 import Termo from './Termo';
 
 
@@ -15,7 +15,6 @@ const useStyles = makeStyles(() =>
   createStyles({
     link: {
       color: 'rgb(255, 255, 255)',
-      fontFamily: "Montserrat",
       textDecoration: 'none',
       '&:hover': {
         color: '#d8dde0',
@@ -39,9 +38,15 @@ const useStyles = makeStyles(() =>
       textAlign: "center",
       background: "#172A3A",
       color: 'white',
+      fontFamily: 'montserrat',
+      fontWeight: 'bold',
       '&:hover': {
         background: '#172A3A',
       }
+    },
+    font: {
+      fontFamily: 'montserrat',
+      fontWeight: 'bold',
     }
   }),
 );
@@ -64,7 +69,6 @@ const Footer: React.FC = () => {
       <div className={classes.internal}>
         <Box
           color="white"
-          fontFamily="Montserrat"
           display="flex"
           fontSize="72%"
           alignItems="center"
@@ -75,15 +79,15 @@ const Footer: React.FC = () => {
           bgcolor="#172A3A"
           sx={{ height: 50 }}
         >
-          <Box p={1} order={2}>
+          <Box  order={2}>
             <Button onClick={handleClickOpen} className={classes.link}>
               <Tooltip title="Abrir Termo">
-                <Box p={1} order={4}> Política de Privacidade</Box>
+                <Box  order={4}> <Typography className={classes.font}>
+                  Politica de privacidade
+                </Typography></Box>
               </Tooltip>
             </Button>
           </Box>
-          <Box order={3}> - </Box>
-          <Box p={1} order={4}> Likkn.com</Box>
         </Box>
       </div>
 

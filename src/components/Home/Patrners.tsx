@@ -23,9 +23,6 @@ const useStyles = makeStyles(() =>
             backgroundRepeat: 'no-repeat',
             backgroundSize: 'cover',
         },
-        media: {
-            height: 140,
-        },
         container: {
             maxWidth: '60%',
             display: 'flex',
@@ -35,33 +32,7 @@ const useStyles = makeStyles(() =>
             left: '50%',
             transform: 'translate(-50%)',
         },
-        root2: {
-            minWidth: 270,
-        },
 
-        title: {
-            fontSize: '150%',
-            fontFamily: 'Montserrat',
-            fontWeight: 'bold',
-      
-          },
-          titlev2: {
-            fontSize: '120%',
-            fontFamily: 'Montserrat',
-            fontWeight: 'bold',
-            color: '#B0D236',
-          },
-          text: {
-            fontSize: '100%',
-            fontFamily: 'Montserrat',
-            fontWeight: 'bold',
-            textAlign: 'justify',
-          },
-          img:{
-            display: 'flex',
-            justifyContent: 'center',
-            alignItems: 'center'
-          }
     }),
 );
 

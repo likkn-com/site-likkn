@@ -9,6 +9,7 @@ import DialogContent from '@material-ui/core/DialogContent';
 import DialogTitle from '@material-ui/core/DialogTitle';
 import Icon from '@material-ui/core/Icon';
 import TextField from '@material-ui/core/TextField';
+import { Typography } from '@material-ui/core';
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -16,7 +17,6 @@ const useStyles = makeStyles((theme: Theme) =>
       position: 'absolute',
     },
     btn: {
-      fontFamily: "Montserrat",
       background: '#172A3A',
       position: 'fixed',
       zIndex: 9999,
@@ -24,12 +24,13 @@ const useStyles = makeStyles((theme: Theme) =>
       bottom: '10%',
       borderRadius: '30px',
       width: '2px',
+
     },
     icon: {
       color: '#ffffff',
     },
     dialog: {
-      fontFamily: "Montserrat",
+
       background: '#172A3A',
       color: '#ffffff',
       textAlign: 'center',
@@ -39,6 +40,8 @@ const useStyles = makeStyles((theme: Theme) =>
       background: '#ffffff',
       color: '#172A3A',
       margin: theme.spacing(1),
+      fontFamily: 'montserrat',
+      fontWeight: 'bold',
       '&:hover': {
         background: '#172A3A',
         color: '#ffffff',
@@ -52,9 +55,18 @@ const useStyles = makeStyles((theme: Theme) =>
     },
     text: {
       width: '96%',
+      fontFamily: 'montserrat',
+      fontWeight: 'bold',
+
     },
     dialogContent: {
       maxWidth: 280,
+
+    },
+    font: {
+      fontFamily: 'montserrat',
+      fontWeight: 'bold',
+      fontSize: '100%',
     }
   }),
 );
@@ -96,8 +108,10 @@ const Contacts: React.FC = () => {
         </IconButton>
       </Button>
 
-      <Dialog open={open} onClose={handleClose} >
-        <DialogTitle className={classes.dialog} id="form-dialog-title">Contate-nos</DialogTitle>
+      <Dialog open={open} onClose={handleClose}>
+        <DialogTitle className={classes.dialog} id="form-dialog-title">
+          <Typography className={classes.font}> Contate-nos </Typography>
+        </DialogTitle>
         <DialogContent className={classes.dialogContent}>
           <form className={classes.form} noValidate autoComplete="off" method="post" action={email}>
 
@@ -117,9 +131,7 @@ const Contacts: React.FC = () => {
             </Button>
           </form>
         </DialogContent>
-        <DialogActions className={classes.dialog}>
-
-        </DialogActions>
+        <DialogActions className={classes.dialog}></DialogActions>
       </Dialog>
     </div>
   );

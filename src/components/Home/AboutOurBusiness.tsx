@@ -23,29 +23,28 @@ const useStyles = makeStyles(() =>
 
     title: {
       fontSize: '150%',
-      fontFamily: 'Montserrat',
+      fontFamily: 'montserrat',
       fontWeight: 'bold',
-
     },
     titlev2: {
       fontSize: '120%',
-      fontFamily: 'Montserrat',
-      fontWeight: 'bold',
       color: '#B0D236',
+      fontFamily: 'montserrat',
+      fontWeight: 'bold',
     },
     text: {
       fontSize: '100%',
-      fontFamily: 'Montserrat',
-      fontWeight: 'bold',
       textAlign: 'justify',
+      fontFamily: 'montserrat',
+      fontWeight: 'bold',
     },
     root2: {
       minWidth: 270,
     },
     bold: {
       fontSize: '130%',
-      fontFamily: 'Montserrat',
       fontWeight: 'bold',
+      fontFamily: 'montserrat',
     },
     background:{
       background: '#F2F7FA',

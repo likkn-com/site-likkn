@@ -14,6 +14,7 @@ const useStyles = makeStyles((theme: Theme) =>
       fontSize: '100%',
       fontWeight: 'bold',
       textAlign: 'center',
+      fontFamily: 'montserrat',
     },
     link: {
       color: 'rgb(255, 255, 255)',
@@ -22,12 +23,21 @@ const useStyles = makeStyles((theme: Theme) =>
     subTitle: {
       fontSize: '100%',
       textAlign: 'center',
+      fontFamily: 'montserratBold',
+      fontWeight: 'bold',
     },
     text: {
       fontSize: '80%',
+      fontFamily: "Montserrat",
+      fontWeight: 'bold',
     },
     item: {
       fontSize: '80%',
+      fontFamily: 'montserratBold',
+      fontWeight: 'bold',
+    },
+    bold:{
+      fontFamily: 'montserratBold',
       fontWeight: 'bold',
     }
 
@@ -60,7 +70,7 @@ const Termo: React.FC = () => {
         Lembramos que os Termos de Uso e a Política de Privacidade, assim como os conteúdos e funcionalidades da
         Plataforma, poderão ser atualizados a qualquer momento. A Likkn dará ciência aos Usuários dessas atualizações
         mediante a publicação da versão atualizada dos Termos de Uso da Comunidade, com a data da “Última
-        atualização”.<b> O uso contínuo da Plataforma pelo Usuário após as alterações destes Termos de Uso e
+        atualização”.<b className={classes.bold}> O uso contínuo da Plataforma pelo Usuário após as alterações destes Termos de Uso e
           Política de Privacidade, implica na concordância automática com as alterações.</b>
       </Typography>
       <br />
@@ -227,11 +237,11 @@ const Termo: React.FC = () => {
         Usuários.<br /><br />
         A Likkn destaca ao Usuário que após a exclusão do conteúdo, este poderá continuar a existir em outros locais nos
         nossos sistemas quando:<br /><br />
-        <b>(i)</b> A exclusão imediata não for possível devido a limitações técnicas (neste caso, seu conteúdo será
+        <b className={classes.bold}>(i)</b> A exclusão imediata não for possível devido a limitações técnicas (neste caso, seu conteúdo será
         excluído em, no máximo, 90 dias de quando o Usuário o excluiu);<br />
-        <b>(ii)</b> O conteúdo tiver sido usado por outros Usuários de acordo com essa licença, e estes não o excluíram
+        <b className={classes.bold}>(ii)</b> O conteúdo tiver sido usado por outros Usuários de acordo com essa licença, e estes não o excluíram
         (neste caso, a licença continuará a ser aplicável até que aquele conteúdo seja excluído); ou<br />
-        <b>(iii)</b> A exclusão imediata restrinja nossa capacidade de investigar ou identificar atividade ilegal ou violações
+        <b className={classes.bold}>(iii)</b> A exclusão imediata restrinja nossa capacidade de investigar ou identificar atividade ilegal ou violações
         aos presentes Termos de Uso e Política de Privacidades, ou ainda, impeça-nos de cumprir uma
         obrigação legal, como a preservação de provas, bem como para atender a uma solicitação de uma
         autoridade judicial ou administrativa, de aplicação da lei ou de uma agência governamental;<br /><br />
@@ -561,7 +571,7 @@ const Termo: React.FC = () => {
         Estes Termos de Uso e Política de Privacidade são regidos e interpretados pelas leis da Constituição Federal do
         Brasil. As Partes elegem o Foro Cível da Comarca de São Paulo, Estado de São Paulo, para solucionar quaisquer
         controvérsias que surjam em relação a estes Termos de Uso.<br /><br />
-        <b>Agradecemos pela leitura dos nossos Termos de Uso. Bem-vindo(a) à Likkn!</b><br /><br />
+        <b className={classes.bold}>Agradecemos pela leitura dos nossos Termos de Uso. Bem-vindo(a) à Likkn!</b><br /><br />
       </Typography>
     </div>
   );

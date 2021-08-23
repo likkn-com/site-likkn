@@ -21,49 +21,50 @@ const useStyles = makeStyles({
     minHeight: 700,
     borderRadius: '15px',
   },
-  img:{
+  img: {
     borderRadius: '50%',
   },
-  box:{
+  box: {
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
   },
-  boxIcon:{
+  boxIcon: {
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
-    
   },
-  imgBoxBC:{
+  imgBoxBC: {
     background: 'linear-gradient( 160deg, #a5cceb, hsla(50, 50%, 95%, 50))',
   },
-  title:{
+  title: {
     background: '#2F8A41',
-    textAlign:'center',
-    fontFamily: 'Montserrat',
+    textAlign: 'center',
     color: 'white',
-    fontSize: '150%'
-  },
-  office:{
-    background: '#1F9BDF',
-    textAlign:'center',
-    fontFamily: 'Montserrat',
-    color: 'white',
-    fontSize: '100%'
-  },
-  textDesc:{
-    background: '#ffffff',
-    textAlign:'justify',
-    fontFamily: 'Montserrat',
-    fontSize: '100%',
+    fontSize: '150%',
+    fontFamily: 'montserrat',
     fontWeight: 'bold',
   },
-  icon:{
+  office: {
+    background: '#1F9BDF',
+    textAlign: 'center',
+    color: 'white',
+    fontSize: '100%',
+    fontFamily: 'montserrat',
+    fontWeight: 'bold',
+  },
+  textDesc: {
+    background: '#ffffff',
+    textAlign: 'justify',
+    fontSize: '100%',
+    fontFamily: 'montserrat',
+    fontWeight: 'bold',
+  },
+  icon: {
     color: '#0e76a8',
     fontSize: '50px',
   },
-  link:{
+  link: {
     textDecoration: 'none',
   }
 });
@@ -71,40 +72,40 @@ const useStyles = makeStyles({
 
 const HomeCard: React.FC<HomeCardProps> = ({ desc, img, name, office, link }, HomeCardProps) => {
   const classes = useStyles();
-  
+
   return (
     <Card className={classes.root} variant="outlined">
-        <Typography className={classes.box + ' ' + classes.imgBoxBC}>
-          <div >
-            <br/><br/>
-            <img className={classes.img} src={img} width="130px" alt="user_mg" />     
-            <br/><br/>
-          </div>
-        </Typography>
- 
-        <Typography variant="h4" className={classes.title}>
-          {name}
-        </Typography>
+      <Typography className={classes.box + ' ' + classes.imgBoxBC}>
+        <div >
+          <br /><br />
+          <img className={classes.img} src={img} width="130px" alt="user_mg" />
+          <br /><br />
+        </div>
+      </Typography>
 
-        <Typography variant="h5" className={classes.office}>
-          {office}
-        </Typography>
-        <CardContent>
+      <Typography variant="h4" className={classes.title}>
+        {name}
+      </Typography>
+
+      <Typography variant="h5" className={classes.office}>
+        {office}
+      </Typography>
+      <CardContent>
 
         <Typography variant="h6" className={classes.textDesc}>
           {desc}
-          <br/><br/>
+          <br /><br />
         </Typography>
 
         <div className={classes.boxIcon}>
-            <a
-              className={classes.link}
-              target="_blank"
-              href={link} rel="noreferrer">
-              <LinkedInIcon className={classes.icon}/>
-            </a>
-          </div>
-        </CardContent>
+          <a
+            className={classes.link}
+            target="_blank"
+            href={link} rel="noreferrer">
+            <LinkedInIcon className={classes.icon} />
+          </a>
+        </div>
+      </CardContent>
 
     </Card>
   );

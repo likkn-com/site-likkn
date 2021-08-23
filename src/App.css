@@ -36,3 +36,13 @@
     transform: rotate(360deg);
   }
 }
+
+@font-face {
+	font-family: montserrat;
+	src: url(../src/assets/montserrat/Montserrat-ExtraLight.ttf);
+}
+
+@font-face {
+	font-family: montserratBold;
+	src: url(../src/assets/montserrat/Montserrat-ExtraBoldItalic.ttf);
+}

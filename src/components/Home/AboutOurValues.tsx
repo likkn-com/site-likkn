@@ -31,27 +31,27 @@ const useStyles = makeStyles(() =>
 
         title: {
             fontSize: '150%',
-            fontFamily: 'Montserrat',
+            fontFamily: 'montserrat',
             fontWeight: 'bold',
-      
-          },
-          titlev2: {
+
+        },
+        titlev2: {
             fontSize: '120%',
-            fontFamily: 'Montserrat',
-            fontWeight: 'bold',
             color: '#B0D236',
-          },
-          text: {
-            fontSize: '100%',
-            fontFamily: 'Montserrat',
+            fontFamily: 'montserrat',
             fontWeight: 'bold',
+        },
+        text: {
+            fontSize: '100%',
             textAlign: 'justify',
-          },
-          img:{
+            fontFamily: 'montserrat',
+            fontWeight: 'bold',
+        },
+        img: {
             display: 'flex',
             justifyContent: 'center',
             alignItems: 'center'
-          }
+        }
     }),
 );
 
@@ -61,31 +61,31 @@ const AboutOurValues: React.FC = () => {
     return (
         <div className={classes.background}>
 
-            <br/>
+            <br />
             <div className={classes.container}>
                 <div className={classes.root}>
-                <br/><br/><br/>
+                    <br /><br /><br />
                     <Grid container spacing={10} className={classes.img}>
                         <Grid item xs>
 
-                        <Typography className={classes.title} paragraph={true}> Sobre os nossos Valores </Typography>
+                            <Typography className={classes.title} paragraph={true}> Sobre os nossos Valores </Typography>
                             <div className={classes.root2}>
                                 <img src={Cut} width="100%" height="100%" alt="cut" />
                             </div >
                         </Grid>
                         <Grid item xs>
-                        <Typography className={classes.titlev2} paragraph={true}> Conectando pessoas através da tecnologia </Typography>
-                        <Typography className={classes.text} paragraph={true}> * Nosso objetivo é tornar as tecnologias modernas de software acessíveis, com soluções de ponta e preços justos. </Typography>
+                            <Typography className={classes.titlev2} paragraph={true}> Conectando pessoas através da tecnologia </Typography>
+                            <Typography className={classes.text} paragraph={true}> * Nosso objetivo é tornar as tecnologias modernas de software acessíveis, com soluções de ponta e preços justos. </Typography>
 
-                        <Typography className={classes.text} paragraph={true}> * Um de nossos principais valores é honestidade e transparência com nossos parceiros e clientes. </Typography>
-                        <Typography className={classes.text} paragraph={true}> * Nós não fornecemos software; Nós fornecemos solução conforme as necessidades dos clientes. </Typography>
-                        <Typography className={classes.text} paragraph={true}>* As necessidades de cada cliente são diferentes. Nosso principal trabalho é entendê-los para que possamos oferecer soluções customizadas a um preço acessível. </Typography>
+                            <Typography className={classes.text} paragraph={true}> * Um de nossos principais valores é honestidade e transparência com nossos parceiros e clientes. </Typography>
+                            <Typography className={classes.text} paragraph={true}> * Nós não fornecemos software; Nós fornecemos solução conforme as necessidades dos clientes. </Typography>
+                            <Typography className={classes.text} paragraph={true}>* As necessidades de cada cliente são diferentes. Nosso principal trabalho é entendê-los para que possamos oferecer soluções customizadas a um preço acessível. </Typography>
                         </Grid>
                     </Grid>
-                    <br/><br/><br/>
+                    <br /><br /><br />
                 </div>
             </div>
-            <br/>
+            <br />
         </div>
     );
 }

@@ -16,6 +16,7 @@ import LanguageIcon from '@material-ui/icons/Language';
 import SystemUpdateAltIcon from '@material-ui/icons/SystemUpdateAlt';
 import { Link } from 'react-router-dom'
 import HomeIcon from '@material-ui/icons/Home';
+import { Typography } from '@material-ui/core';
 
 interface HeaderProps {
     page: number;
@@ -76,11 +77,19 @@ const useStyles = makeStyles(() =>
             color: '#172A3A',
             background: '#F2F7FA',
             borderRadius: '30px',
+            fontFamily: 'montserrat',
+            fontWeight: 'bold',
+            
         },
         menu: {
             textDecoration: 'none',
             color: '#172A3A',
         },
+
+        menuText:{
+            fontFamily: 'montserrat',
+            fontWeight: 'bold',
+        }
     }),
 );
 
@@ -131,7 +140,6 @@ const Header: React.FC<HeaderProps> = ({ page }, HeaderProps) => {
             <div className={classes.internal}>
                 <Box
                     color="white"
-                    fontFamily="Montserrat"
                     display="flex"
                     fontSize="78%"
                     alignItems="center"
@@ -173,35 +181,55 @@ const Header: React.FC<HeaderProps> = ({ page }, HeaderProps) => {
                                 <Link to="/home" className={classes.menu}>
                                     <StyledMenuItem selected={page === 1}>
                                         <ListItemIcon> {iconHome} </ListItemIcon>
-                                        <ListItemText primary="Home" />
+                                        <ListItemText 
+                                            disableTypography 
+                                            primary={<Typography className={classes.menuText}>Home</Typography>}
+                                            >
+                                        </ListItemText>
                                     </StyledMenuItem>
                                 </Link>
 
                                 <Link to="/interno" className={classes.menu}>
                                     <StyledMenuItem selected={page === 2}>
                                         <ListItemIcon> {iconINTERNO} </ListItemIcon>
-                                        <ListItemText primary="Sistema Interno" />
+                                        <ListItemText 
+                                            disableTypography 
+                                            primary={<Typography className={classes.menuText}>Sistema Interno</Typography>}
+                                            >
+                                        </ListItemText>
                                     </StyledMenuItem>
                                 </Link>
 
                                 <Link to="/lgpd" className={classes.menu}>
                                     <StyledMenuItem selected={page === 3}>
                                         <ListItemIcon> {iconLGPD} </ListItemIcon>
-                                        <ListItemText primary="Consultoria LGPD" />
+                                        <ListItemText 
+                                            disableTypography 
+                                            primary={<Typography className={classes.menuText}>Consultoria LGPD</Typography>}
+                                            >
+                                        </ListItemText>
                                     </StyledMenuItem>
                                 </Link>
 
                                 <Link to="/sap" className={classes.menu}>
                                     <StyledMenuItem selected={page === 4}>
                                         <ListItemIcon> {iconSAP} </ListItemIcon>
-                                        <ListItemText primary="Consultoria SAP" />
+                                        <ListItemText 
+                                            disableTypography 
+                                            primary={<Typography className={classes.menuText}>Consultoria SAP</Typography>}
+                                            >
+                                        </ListItemText>
                                     </StyledMenuItem>
                                 </Link>
 
                                 <Link to="/web" className={classes.menu}>
                                     <StyledMenuItem selected={page === 5}>
                                         <ListItemIcon> {iconWEB} </ListItemIcon>
-                                        <ListItemText primary="Web Designer" />
+                                        <ListItemText 
+                                            disableTypography 
+                                            primary={<Typography className={classes.menuText}>Web Designer</Typography>}
+                                            >
+                                        </ListItemText>
                                     </StyledMenuItem>
                                 </Link>
 
