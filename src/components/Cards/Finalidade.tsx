@@ -48,13 +48,13 @@ const useStyles = makeStyles((theme: Theme) =>
   })
 );
 
-const AdmPublica: React.FC = () => {
+const Finalidade: React.FC = () => {
   const classes = useStyles();
   return (
     <Card variant="outlined" className={classes.root}>
       <CardHeader className={classes.header}
         titleTypographyProps={{ variant: "body2", align: "center" }}
-        title="Administração Pública"
+        title="Finalidade"
       />
       <div className={classes.image}>
         <img src={admpublica} alt="" />
@@ -63,4 +63,4 @@ const AdmPublica: React.FC = () => {
   );
 };
 
-export default AdmPublica;
+export default Finalidade;

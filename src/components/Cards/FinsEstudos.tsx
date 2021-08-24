@@ -2,7 +2,7 @@ import React from "react";
 import { makeStyles, Theme, createStyles } from "@material-ui/core/styles";
 import Card from "@material-ui/core/Card";
 import CardHeader from "@material-ui/core/CardHeader";
-import consentimento from "../../assets/images/consentimento.svg";
+import estudo from "../../assets/images/estudo.svg";
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -57,7 +57,7 @@ const FinsEstudos: React.FC = () => {
         title="Fins de Estudos"
       />
       <div className={classes.image}>
-        <img src={consentimento} alt="" />
+        <img src={estudo} alt="" />
       </div>
     </Card>
   );

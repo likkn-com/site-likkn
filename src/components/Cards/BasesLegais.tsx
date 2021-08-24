@@ -14,7 +14,11 @@ import FinsEstudos from "./FinsEstudos";
 import ObrigacaoLegal from "./ObrigacaoLegal";
 import AdmPublica from "./AdmPublica";
 import Contrato from "./Contrato";
-
+import EsferaProcessual from "./EsferaProcessual";
+import ProtecaoVida from "./ProtecaoVida";
+import TutelaSaude from "./TutelaSaude"
+import LegitimoInteresse from "./LegitimoInteresse"
+import ProtecaoCredito from "./ProtecaoCredito"
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -101,9 +105,9 @@ const BasesLegais: React.FC = () => {
       <CardHeader title="Bases Legais" />
       <CardContent className={classes.cardcontent}>
       <Consentimento />
+      <LegitimoInteresse />
+      <Contrato />
       <ObrigacaoLegal />
-      <AdmPublica />
-      <FinsEstudos />
       </CardContent>
       <CardActions
         disableSpacing
@@ -125,10 +129,12 @@ const BasesLegais: React.FC = () => {
       </CardActions>
       <Collapse in={expanded} timeout="auto" unmountOnExit>
       <CardContent className={classes.cardcontent + " " + classes.cardContentExpanded}>
-      <Contrato />
-      {/* <ObrigacaoLegal />
       <AdmPublica />
-      <FinsEstudos /> */}
+      <FinsEstudos />
+      <EsferaProcessual />
+      <ProtecaoVida />
+      <TutelaSaude />
+      <ProtecaoCredito />
       </CardContent>
         <CardActions disableSpacing className={classes.visible2}>
           <Typography className={classes.readmore}>Reduzir</Typography>

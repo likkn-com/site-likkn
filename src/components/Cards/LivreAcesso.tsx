@@ -2,7 +2,7 @@ import React from "react";
 import { makeStyles, Theme, createStyles } from "@material-ui/core/styles";
 import Card from "@material-ui/core/Card";
 import CardHeader from "@material-ui/core/CardHeader";
-import admpublica from "../../assets/images/admpublica.svg";
+import livreacesso from "../../assets/images/livreacesso.svg";
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -48,19 +48,19 @@ const useStyles = makeStyles((theme: Theme) =>
   })
 );
 
-const AdmPublica: React.FC = () => {
+const LivreAcesso: React.FC = () => {
   const classes = useStyles();
   return (
     <Card variant="outlined" className={classes.root}>
       <CardHeader className={classes.header}
         titleTypographyProps={{ variant: "body2", align: "center" }}
-        title="Administração Pública"
+        title="Livre Acesso"
       />
       <div className={classes.image}>
-        <img src={admpublica} alt="" />
+        <img src={livreacesso} alt="" />
       </div>
     </Card>
   );
 };
 
-export default AdmPublica;
+export default LivreAcesso;
