@@ -16,9 +16,6 @@ const useStyles = makeStyles((theme: Theme) =>
         padding: 0,
       },
     },
-    teste: {
-        color: 'red'
-    },
   }),
 );
 

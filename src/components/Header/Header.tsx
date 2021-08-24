@@ -42,18 +42,7 @@ const StyledMenu = withStyles({
     />
 ));
 
-const StyledMenuItem = withStyles((theme) => ({
-    /*
-    root: {
-        '&:focus': {
-            backgroundColor: '#172A3A',
-            '& .MuiListItemIcon-root, & .MuiListItemText-primary': {
-                color: '#F2F7FA',
-            },
-        },
-    },
-    */
-}))(MenuItem);
+const StyledMenuItem = withStyles((theme) => ({}))(MenuItem);
 
 const useStyles = makeStyles(() =>
     createStyles({
@@ -79,14 +68,14 @@ const useStyles = makeStyles(() =>
             borderRadius: '30px',
             fontFamily: 'montserrat',
             fontWeight: 'bold',
-            
+
         },
         menu: {
             textDecoration: 'none',
             color: '#172A3A',
         },
 
-        menuText:{
+        menuText: {
             fontFamily: 'montserrat',
             fontWeight: 'bold',
         }
@@ -103,24 +92,24 @@ const Header: React.FC<HeaderProps> = ({ page }, HeaderProps) => {
     4 = sap
     5 = web
     */
-    var iconHome = <HomeIcon style={{ color: "#172A3A" }}/>
-    var iconINTERNO = <SendIcon style={{ color: "#172A3A" }}/>
-    var iconLGPD = <SystemUpdateAltIcon style={{ color: "#172A3A" }}/>
-    var iconSAP = <InboxIcon style={{ color: "#172A3A" }}/>
-    var iconWEB = <LanguageIcon style={{ color: "#172A3A" }}/>
+    var iconHome = <HomeIcon style={{ color: "#172A3A" }} />
+    var iconINTERNO = <SendIcon style={{ color: "#172A3A" }} />
+    var iconLGPD = <SystemUpdateAltIcon style={{ color: "#172A3A" }} />
+    var iconSAP = <InboxIcon style={{ color: "#172A3A" }} />
+    var iconWEB = <LanguageIcon style={{ color: "#172A3A" }} />
 
     var buttonSelect = iconHome;
 
-    if(page === 2){
+    if (page === 2) {
         buttonSelect = iconINTERNO;
     }
-    else if(page === 3){
+    else if (page === 3) {
         buttonSelect = iconLGPD;
     }
-    else if(page === 4){
+    else if (page === 4) {
         buttonSelect = iconSAP;
     }
-    else if(page === 5){
+    else if (page === 5) {
         buttonSelect = iconWEB;
     }
 
@@ -181,10 +170,10 @@ const Header: React.FC<HeaderProps> = ({ page }, HeaderProps) => {
                                 <Link to="/home" className={classes.menu}>
                                     <StyledMenuItem selected={page === 1}>
                                         <ListItemIcon> {iconHome} </ListItemIcon>
-                                        <ListItemText 
-                                            disableTypography 
+                                        <ListItemText
+                                            disableTypography
                                             primary={<Typography className={classes.menuText}>Home</Typography>}
-                                            >
+                                        >
                                         </ListItemText>
                                     </StyledMenuItem>
                                 </Link>
@@ -192,10 +181,10 @@ const Header: React.FC<HeaderProps> = ({ page }, HeaderProps) => {
                                 <Link to="/interno" className={classes.menu}>
                                     <StyledMenuItem selected={page === 2}>
                                         <ListItemIcon> {iconINTERNO} </ListItemIcon>
-                                        <ListItemText 
-                                            disableTypography 
+                                        <ListItemText
+                                            disableTypography
                                             primary={<Typography className={classes.menuText}>Sistema Interno</Typography>}
-                                            >
+                                        >
                                         </ListItemText>
                                     </StyledMenuItem>
                                 </Link>
@@ -203,10 +192,10 @@ const Header: React.FC<HeaderProps> = ({ page }, HeaderProps) => {
                                 <Link to="/lgpd" className={classes.menu}>
                                     <StyledMenuItem selected={page === 3}>
                                         <ListItemIcon> {iconLGPD} </ListItemIcon>
-                                        <ListItemText 
-                                            disableTypography 
+                                        <ListItemText
+                                            disableTypography
                                             primary={<Typography className={classes.menuText}>Consultoria LGPD</Typography>}
-                                            >
+                                        >
                                         </ListItemText>
                                     </StyledMenuItem>
                                 </Link>
@@ -214,10 +203,10 @@ const Header: React.FC<HeaderProps> = ({ page }, HeaderProps) => {
                                 <Link to="/sap" className={classes.menu}>
                                     <StyledMenuItem selected={page === 4}>
                                         <ListItemIcon> {iconSAP} </ListItemIcon>
-                                        <ListItemText 
-                                            disableTypography 
+                                        <ListItemText
+                                            disableTypography
                                             primary={<Typography className={classes.menuText}>Consultoria SAP</Typography>}
-                                            >
+                                        >
                                         </ListItemText>
                                     </StyledMenuItem>
                                 </Link>
@@ -225,10 +214,10 @@ const Header: React.FC<HeaderProps> = ({ page }, HeaderProps) => {
                                 <Link to="/web" className={classes.menu}>
                                     <StyledMenuItem selected={page === 5}>
                                         <ListItemIcon> {iconWEB} </ListItemIcon>
-                                        <ListItemText 
-                                            disableTypography 
+                                        <ListItemText
+                                            disableTypography
                                             primary={<Typography className={classes.menuText}>Web Designer</Typography>}
-                                            >
+                                        >
                                         </ListItemText>
                                     </StyledMenuItem>
                                 </Link>

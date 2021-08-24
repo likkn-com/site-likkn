@@ -4,12 +4,8 @@ import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
 import TemplateCardItem from './TemplateCardItem';
 import img1 from '../../assets/images/hermes.png'
-
 import img2 from '../../assets/images/renato.png'
 import img3 from '../../assets/images/pedro.png'
-
-
-
 
 const useStyles = makeStyles(() =>
     createStyles({

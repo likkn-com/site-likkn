@@ -9,26 +9,15 @@ import IconButton from '@material-ui/core/IconButton';
 import Typography from '@material-ui/core/Typography';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import { Box, Toolbar } from '@material-ui/core';
-import SvgIcon, { SvgIconProps } from '@material-ui/core/SvgIcon';
 import logo from '../../assets/images/logo.png'
 
 //https://github.com/Learus/react-material-ui-carousel
 import Carousel from 'react-material-ui-carousel'
 
-
-
 interface TemplateCardItemProps {
     title: string;
     desc: string;
     imgs: string[];
-}
-
-function Icon(props: SvgIconProps) {
-    return (
-      <SvgIcon {...props}>
-        {logo}
-      </SvgIcon>
-    );
 }
 
 const useStyles = makeStyles((theme: Theme) =>

@@ -32,8 +32,7 @@ const MediaPlayer: React.FC = () => {
                 controls={true}
                 playing={true}
                 loop={true}
-                muted={false}
-                
+                muted={false}            
             />
             <br/>
         </div>

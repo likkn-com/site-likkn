@@ -1,10 +1,9 @@
 import React from 'react';
-
 import { makeStyles, createStyles } from '@material-ui/core/styles';
-
 import Cut from "../../assets/images/cut.png"
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
+
 const useStyles = makeStyles(() =>
     createStyles({
         root: {
