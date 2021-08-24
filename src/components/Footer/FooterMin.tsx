@@ -34,7 +34,7 @@ const useStyles = makeStyles(() =>
     external: {
       background: "#172A3A",
       display: 'flex',
-      position: 'relative',
+      position: 'absolute',
       width: '100%',
       bottom:'0',
     },
@@ -55,7 +55,7 @@ const useStyles = makeStyles(() =>
   }),
 );
 
-const Footer: React.FC = () => {
+const FooterMin: React.FC = () => {
   const classes = useStyles();
   const [open, setOpen] = React.useState(false);
 
@@ -117,4 +117,4 @@ const Footer: React.FC = () => {
   );
 }
 
-export default Footer;
+export default FooterMin;

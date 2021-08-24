@@ -356,7 +356,7 @@ const Termo: React.FC = () => {
         IDENTIFICAR CORRETA E DEVIDAMENTE O USUÁRIO, DE FORMA A GARANTIR A
         PREVENÇÃO A FRAUDES E A SEGURANÇA DO USUÁRIO TITULAR DOS DADOS PESSOAIS.<br /><br />
       </Typography>
-      <Typography className={classes.item} > 14.2 Cookies, tags de pixel, log files, web beacons e outros </Typography>
+      <Typography className={classes.item} > 13.2 Cookies, tags de pixel, log files, web beacons e outros </Typography>
       <br />
       <Typography className={classes.text} paragraph={true}>
         A Likkn poderá utilizar cookies e tags de pixel, que possibilitam a coleta de informações referentes ao seu histórico
@@ -539,7 +539,7 @@ const Termo: React.FC = () => {
         PROTEÇÃO DE DADOS, CONFORME EXPLICADO NO ITEM 13.1 ACIMA <br /><br />
       </Typography>
 
-      <Typography className={classes.item} > 17. Considerações Finais  </Typography>
+      <Typography className={classes.item} > 15. Considerações Finais  </Typography>
       <br />
       <Typography className={classes.text} paragraph={true}>
         A presente versão dos Termos de Uso e Política de Privacidade substitui todas as versões anteriores
