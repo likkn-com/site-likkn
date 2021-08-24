@@ -1,6 +1,6 @@
 import React from 'react';
 import Box from '@material-ui/core/Box';
-import logoCompleto from "../../assets/images/iconCV2.png"
+import logoCompleto from "../../assets/images/iconCV2.png";
 import { makeStyles, createStyles } from '@material-ui/core/styles';
 
 /*menu*/
@@ -14,7 +14,7 @@ import InboxIcon from '@material-ui/icons/MoveToInbox';
 import SendIcon from '@material-ui/icons/Send';
 import LanguageIcon from '@material-ui/icons/Language';
 import SystemUpdateAltIcon from '@material-ui/icons/SystemUpdateAlt';
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
 import HomeIcon from '@material-ui/icons/Home';
 import { Typography } from '@material-ui/core';
 
