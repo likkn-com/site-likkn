@@ -2,8 +2,8 @@ import React from 'react';
 import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
 import Home from './components/Home/Home';
 import Interno from './components/Interno/Interno';
-import Webdesign from './components/Webdesign/webdesign';
-import Lgpd from './components/Lgpd/lgpd';
+import Webdesign from './components/Webdesign/Webdesign';
+import Lgpd from './components/Lgpd/Lgpd';
 
 function App() {
   return (
