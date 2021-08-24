@@ -3,13 +3,16 @@ import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
 import Home from './components/Home/Home';
 import Interno from './components/Interno/Interno';
 import Webdesign from './components/Webdesign/Webdesign';
+import ConsultoriaLGPD from './components/ConsultoriaLGPD/ConsultoriaLGPD';
 import Lgpd from './components/Lgpd/Lgpd';
 
 function App() {
   return (
     <BrowserRouter>
       {/* <Webdesign /> */}
-      <Lgpd />
+      {/* <Lgpd /> */}
+      <ConsultoriaLGPD />
+
        <Switch>
         <Route path="/home" exact component={Home}/>
         <Route path="/interno" exact component={Interno}/>
