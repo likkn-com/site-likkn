@@ -13,9 +13,9 @@ const Interno: React.FC = () => {
           <Contacts/>
           <Header page={2} />
           <HeaderInterno/>
-          <MediaPlayer/>
+          {/*<MediaPlayer/>*/}
           <Content/>
-          <Templates/>
+          {/*<Templates/>*/}
           <Footer/>
       </div>
   );
