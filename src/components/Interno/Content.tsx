@@ -36,6 +36,11 @@ const useStyles = makeStyles({
         justifyContent: 'center',
         alignItems: 'center',
         alignContent: 'center',
+    },
+    title: {
+        fontSize: '150%',
+        fontFamily: 'montserrat',
+        fontWeight: 'bold',
     }
 
 });
@@ -46,6 +51,8 @@ const Content: React.FC = () => {
     return (
         <div className={classes.container}>
             <div className={classes.root}>
+                <br />
+                <Typography className={classes.title} paragraph >Vantagens</Typography>
                 <Grid container spacing={10}>
                     <Grid item xs className={classes.img}>
                         <div className={classes.root2}>
