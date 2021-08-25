@@ -65,10 +65,11 @@ const AboutOurValues: React.FC = () => {
                 <div className={classes.root}>
                     <br /><br /><br />
                     <Typography className={classes.title} paragraph={true}> Sobre os nossos Valores </Typography>
+                    <br/><br/>
                     <Grid container spacing={10} className={classes.img}>
                         <Grid item xs>
                             <div className={classes.root2}>
-                                <img src={logov2} width="100%" height="100%" alt="logov2" />
+                                <img src={logov2} width="80%" height="80%" alt="logov2" />
                             </div >
                         </Grid>
                         <Grid item xs>
