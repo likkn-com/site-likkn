@@ -1,6 +1,6 @@
 import React from 'react';
 import { makeStyles, createStyles } from '@material-ui/core/styles';
-import Cut from "../../assets/images/cut.png"
+import logov2 from "../../assets/images/logov2.png"
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
 
@@ -64,12 +64,11 @@ const AboutOurValues: React.FC = () => {
             <div className={classes.container}>
                 <div className={classes.root}>
                     <br /><br /><br />
+                    <Typography className={classes.title} paragraph={true}> Sobre os nossos Valores </Typography>
                     <Grid container spacing={10} className={classes.img}>
                         <Grid item xs>
-
-                            <Typography className={classes.title} paragraph={true}> Sobre os nossos Valores </Typography>
                             <div className={classes.root2}>
-                                <img src={Cut} width="100%" height="100%" alt="cut" />
+                                <img src={logov2} width="100%" height="100%" alt="logov2" />
                             </div >
                         </Grid>
                         <Grid item xs>
