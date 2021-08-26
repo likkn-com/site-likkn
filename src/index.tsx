@@ -4,7 +4,7 @@ import './index.css';
 import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
 import Home from './components/Home/Home';
 import Interno from './components/Interno/Interno';
-import Lgpd from './components/Lgpd/Lgpd';
+import Lgpd from './components/Lgpd/LgpdBase';
 import Sap from './components/Sap/Sap';
 import Web from './components/Web/Web';
 import { createTheme, ThemeProvider } from "@material-ui/core";
