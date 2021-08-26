@@ -43,7 +43,7 @@ const HeaderInterno: React.FC = () => {
       </Typography>
       <Typography className={classes.text} paragraph={true}>
         <Box>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem cumque voluptas, minus deserunt, laborum iusto, exercitationem eius eum vero natus deleniti quis accusamus aliquam neque placeat? Nisi vitae illo possimus vero quia dolorem? Aliquam quaerat saepe aspernatur, atque ipsam id? Laudantium a recusandae provident corporis dignissimos rem. Mollitia eligendi ratione nam ipsum, deleniti sapiente laudantium, labore libero eaque provident cupiditate porro est soluta rerum veritatis voluptatibus amet? Temporibus ea incidunt molestias dicta magnam? Dignissimos asperiores facere soluta, aliquam cumque deleniti eum eius libero delectus ea quis voluptas consequuntur ut provident temporibus quae! Blanditiis ad veniam magni animi asperiores illo placeat.
+          Nos desenvolvemos um sistema MDM(Master Data Management), focado em customização, segurança e escalabilidade. Trata-se de um sistema intuitivo que qualquer pessoa com noções minimas de informatica consiga usar e configurar, com ele as possibilidades são praticamente infinitas.
         </Box>
       </Typography>
       <br />

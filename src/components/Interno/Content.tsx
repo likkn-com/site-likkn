@@ -61,7 +61,7 @@ const Content: React.FC = () => {
                     </Grid>
 
                     <Grid item xs className={classes.root2}>
-                        <Typography className={classes.text}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis molestias eaque tempora? Accusamus, ratione inventore asperiores beatae libero quod porro possimus. Quasi laudantium corrupti dignissimos ad dolorem quaerat. Quis nobis reprehenderit error vitae odit aliquid quos pariatur soluta quibusdam. Cum tempora voluptate corrupti recusandae mollitia ut facilis iure culpa! Incidunt.</Typography>
+                        <Typography className={classes.text}>Nosso sistema é altamente customizável, de rápida e segura implementação, escalável e moderno, já preparado de acordo com a LGPD e com um investimento de baixo custo comparado ao seu retorno.</Typography>
                     </Grid>
 
                 </Grid>
