@@ -40,7 +40,13 @@ const useStyles = makeStyles((theme: Theme) =>
 
 const Content: React.FC = () => {
     const classes = useStyles();
-    const imgs = [[desenvolvimento, 'Temos como diferencial o foco em desenvolvimento.'], [especializado, 'Recursos especializados em aplicações SAP em diferentes módulos do sistema.'], [agil, 'Nosso processo é simplificado e ágil.']];
+
+    const imgs = [
+        [desenvolvimento, 'Temos como diferencial o foco em desenvolvimento.'],
+        [especializado, 'Recursos especializados em aplicações SAP em diferentes módulos do sistema.'],
+        [agil, 'Nosso processo é simplificado e ágil.']
+    ];
+
     return (
         <div className={classes.container}>
             <br /><br />
@@ -57,7 +63,7 @@ const Content: React.FC = () => {
             <Card>
                 <Carousel
                     interval={3500}
-                    navButtonsAlwaysVisible={true}
+                    navButtonsAlwaysVisible={false}
                     fullHeightHover={false}
                     indicators={false}
                 >

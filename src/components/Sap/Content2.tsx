@@ -1,10 +1,15 @@
 import React from 'react';
 import { makeStyles, createStyles, Theme } from '@material-ui/core/styles';
-import parceiros from '../../assets/images/parceiro.png'
-import processos from '../../assets/images/processo.png'
+import parceiros_epi from '../../assets/images/parceiros_epi.png'
+import parceiros_nexen from '../../assets/images/parceiros_nexen.png'
+import parceiros_cs from '../../assets/images/parceiros_cs.png'
 import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
 import Grid from '@material-ui/core/Grid';
+import { Button } from '@material-ui/core';
+import Dialog from '@material-ui/core/Dialog';
+import DialogContent from '@material-ui/core/DialogContent';
+import Process from './Process';
 
 const useStyles = makeStyles((theme: Theme) =>
     createStyles({
@@ -37,7 +42,8 @@ const useStyles = makeStyles((theme: Theme) =>
 
         img: {
             display: 'flex',
-            alignItems: 'center'
+            alignItems: 'center',
+            alignContent: 'center',
         },
         background: {
             background: 'linear-gradient( 160deg, rgba(216,222,228,1), hsla(30, 50%, 95%, 80))',
@@ -47,65 +53,77 @@ const useStyles = makeStyles((theme: Theme) =>
 
 const Content2: React.FC = () => {
     const classes = useStyles();
+    const [open, setOpen] = React.useState(false);
+
+    const handleClickOpen = () => {
+        setOpen(true);
+    };
+
+    const handleClose = () => {
+        setOpen(false);
+    };
+
     return (
         <div className={classes.background}>
             <div className={classes.container}>
                 <br /><br />
                 <div className={classes.root}>
+
                     <Grid container spacing={10}>
-                        <Grid item xs className={classes.img}>
+                        <Grid item xs >
                             <div className={classes.root2}>
                                 <Typography className={classes.title} paragraph={true} >
                                     <Box >Composição das estimativas</Box>
                                 </Typography>
-                                <Typography className={classes.text}>
+                                <Typography className={classes.text} paragraph={true}>
                                     - Recebimento da demanda.<br /><br />
                                     - Desenho da solução + documentação técnica.<br /><br />
                                     - Desenvolvimento.<br /><br />
                                     - Testes unitários + documentação de testes.
                                 </Typography>
-                            </div >
-                        </Grid>
-                        <Grid item xs>
 
-                            <div className={classes.root2}>
-                                <Typography className={classes.title} paragraph={true} >
-                                    <Box >Processo</Box>
-                                </Typography>
-                                <div className={classes.root2}>
-                                    <img src={processos} width="100%" height="100%" alt="processos" />
-                                </div >
-                            </div>
+                                <Button onClick={handleClickOpen} variant="contained" color="primary">Conheca nossos processos</Button>
+
+                                <Dialog open={open} onClose={handleClose} >
+                                    <DialogContent>
+                                        {/*<img src={processos} width="100%" height="100%" alt="processos" />*/}
+                                        <Process/>
+                                    </DialogContent>
+                                </Dialog>
+                            </div >
                         </Grid>
                     </Grid>
                 </div>
 
                 <div className={classes.root}>
-                    <Grid container spacing={10}>
 
-                        <Grid item xs>
-                            <div className={classes.root2}>
-                                <Typography className={classes.title} paragraph={true} >
-                                    <Box >Parceiros</Box>
-                                </Typography>
+                    <div className={classes.root2}>
+                        <br /><br />
+                        <Grid item xs={12}>
+                            <Typography className={classes.title} paragraph={true} >
+                                <Box >Parceiros</Box>
+                            </Typography>
+
+                        </Grid>
+                        <Grid container spacing={3}>
+                            <Grid item xs>
                                 <div className={classes.root2}>
-                                    <img src={parceiros} width="100%" height="100%" alt="parceiros" />
-                                </div >
-                            </div >
-                        </Grid>
+                                    <img src={parceiros_epi} width="100%" height="100%" alt="epi" />
+                                </div>
+                            </Grid>
 
-                        <Grid item xs className={classes.img}>
-                            <div className={classes.root2}>
-                                <Typography className={classes.title} paragraph={true} >
-                                    <Box >Garantia</Box>
-                                </Typography>
-                                <Typography className={classes.text}>
-                                    - Todos os desenvolvimentos tem garatia completa de 1 mês a contar da data de entrega.<br /><br />
-                                    - Durante esse período, qualquer erro que seja coberto pela definição de escopo presente na documentação técnica será resolvido, sem custos.
-                                </Typography>
-                            </div >
-                        </Grid>
-                    </Grid>
+                            <Grid item xs>
+                                <div className={classes.root2}>
+                                    <img src={parceiros_nexen} width="100%" height="100%" alt="nexen" />
+                                </div>
+                            </Grid>
+
+                            <Grid item xs>
+                                <div className={classes.root2}>
+                                    <img src={parceiros_cs} width="100%" height="100%" alt="cscorp" />
+                                </div>
+                            </Grid></Grid>
+                    </div >
                 </div>
                 <br />
             </div>
