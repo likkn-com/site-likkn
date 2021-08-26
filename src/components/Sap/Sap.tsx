@@ -4,7 +4,8 @@ import Header from '../Header/Header';
 import Contacts from '../Contacts/Contacts';
 import { makeStyles, createStyles, Theme } from '@material-ui/core/styles';
 import Content from '../Sap/Content';
-import Content2 from '../Sap/Content2';
+import Partners from './Partners';
+import Banner from './Banner';
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -24,8 +25,9 @@ const Sap: React.FC = () => {
     <div className={classes.root}>
       <Contacts/>
       <Header page={4} />
+      <Banner/>
       <Content/>
-      <Content2/>
+      <Partners/>
       <Footer />
     </div>
   );

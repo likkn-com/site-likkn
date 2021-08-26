@@ -1,13 +1,12 @@
 import React from 'react';
 import { makeStyles, createStyles, Theme } from '@material-ui/core/styles';
-import especializado from '../../assets/images/especializado.png'
-import desenvolvimento from '../../assets/images/desenvolvimento.png'
-
-import agil from '../../assets/images/agil.png'
+import Process from './Process';
 import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
-import Carousel from 'react-material-ui-carousel';
-import Card from '@material-ui/core/Card';
+import Grid from '@material-ui/core/Grid';
+import Button from '@material-ui/core/Button';
+import Dialog from '@material-ui/core/Dialog';
+import { DialogContent } from '@material-ui/core';
 
 const useStyles = makeStyles((theme: Theme) =>
     createStyles({
@@ -35,48 +34,81 @@ const useStyles = makeStyles((theme: Theme) =>
             fontFamily: 'montserrat',
             fontWeight: 'bold',
         },
+        root: {
+            flexGrow: 1,
+            minWidth: 200,
+        },
+        img: {
+            display: 'flex',
+            alignItems: 'center',
+            alignContent: 'center',
+        },
+        button:{
+            color: 'white',
+            background: '#172A3A',
+            '&:hover': {
+                background: '#305675',
+                color: '#f8efef',
+              }
+        },
     }),
 );
 
 const Content: React.FC = () => {
     const classes = useStyles();
+    const [open, setOpen] = React.useState(false);
 
-    const imgs = [
-        [desenvolvimento, 'Temos como diferencial o foco em desenvolvimento.'],
-        [especializado, 'Recursos especializados em aplicações SAP em diferentes módulos do sistema.'],
-        [agil, 'Nosso processo é simplificado e ágil.']
-    ];
+    const handleClickOpen = () => {
+        setOpen(true);
+    };
 
+    const handleClose = () => {
+        setOpen(false);
+    };
     return (
         <div className={classes.container}>
-            <br /><br />
-            <Typography className={classes.title} paragraph={true} >
-                <Box >Consultoria Sap</Box>
-            </Typography>
-            <Typography className={classes.text} paragraph={true} >
-                - Atendimento de demandas com preço fechado ou suporte (pacote mensal - baseline).<br /><br />
-                - Foco na arquitetura e desenho da solução, garantindo a melhor utilização dos sistemas e ferramentas disponiveis.<br /><br />
-                - Realização de sessões periódicas de status<br /><br />
-                - Suporte proativo (para pacotes mensais)<br /><br />
-            </Typography>
+            <div className={classes.root}>
+                <Grid container spacing={10}>
+                    <Grid item xs className={classes.img}>
+                        <Grid container spacing={10}>
+                            <Grid item xs >
+                                <Typography className={classes.title} paragraph={true} >
+                                    <Box >Consultoria SAP</Box>
+                                </Typography>
+                                <Typography className={classes.text}>
+                                    - Atendimento de demandas com preço fechado ou suporte (pacote mensal - baseline).<br /><br />
+                                    - Foco na arquitetura e desenho da solução, garantindo a melhor utilização dos sistemas e ferramentas disponiveis.<br /><br />
+                                    - Realização de sessões periódicas de status<br /><br />
+                                    - Suporte proativo (para pacotes mensais)
+                                </Typography>
+                            </Grid>
+                        </Grid>
+                    </Grid>
 
-            <Card>
-                <Carousel
-                    interval={3500}
-                    navButtonsAlwaysVisible={false}
-                    fullHeightHover={false}
-                    indicators={false}
-                >
-                    {imgs.map((img, i) =>
-                        <Typography className={classes.text2} paragraph={true} >
-                            <img key={i} src={img[0]} width="100%" height="100%" alt="conteudo" />
-                            {img[1]}
-                        </Typography>
-                    )}
-                </Carousel>
-            </Card>
-            <br />
-            <br />
+                    <Grid item xs className={classes.img}>
+                        <Grid container spacing={10}>
+                            <Grid item xs >
+                                <Typography className={classes.title} paragraph={true} >
+                                    <Box >Composição das estimativas</Box>
+                                </Typography>
+                                <Typography className={classes.text} paragraph={true}>
+                                    - Recebimento da demanda.<br /><br />
+                                    - Desenho da solução + documentação técnica.<br /><br />
+                                    - Desenvolvimento.<br /><br />
+                                    - Testes unitários + documentação de testes.
+                                </Typography>
+                                <Button onClick={handleClickOpen} variant="contained" className={classes.button}>Conheca nossos processos</Button>
+                                <Dialog open={open} onClose={handleClose} >
+                                    <DialogContent>
+                                        <Process />
+                                    </DialogContent>
+                                </Dialog>
+                            </Grid>
+                        </Grid>
+                    </Grid>
+                </Grid>
+            </div>
+            <br/><br/>
         </div>
     );
 }
