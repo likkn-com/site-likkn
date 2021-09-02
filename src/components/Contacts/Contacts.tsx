@@ -100,7 +100,7 @@ const Contacts: React.FC = () => {
   }
 
   //comercial@likkn.com
-  var email = 'mailto:erickeescagion@gmail.com?subject=' + subject + '&body=' + content;
+  var email = 'mailto:comercial@likkn.com?subject=' + subject + '&body=' + content;
   return (
     <div className={classes.root}>
       <Button variant="contained" className={classes.btn} onClick={handleClickOpen}>
