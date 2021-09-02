@@ -32,6 +32,11 @@ const useStyles = makeStyles(() =>
             left: '50%',
             transform: 'translate(-50%)',
         },
+        img: {
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center'
+          },
 
     }),
 );
@@ -48,7 +53,7 @@ const Partners: React.FC = () => {
                     <br/><br/><br/>
                     
 
-                    <Grid container spacing={10} >
+                    <Grid container spacing={10} className={classes.img} >
                         <Grid item >
                             <HomeCard name={"Hermes Alves"}
                              img={hermes}
