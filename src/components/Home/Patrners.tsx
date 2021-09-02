@@ -53,7 +53,7 @@ const Partners: React.FC = () => {
                     <br/><br/><br/>
                     
 
-                    <Grid container spacing={10} className={classes.img} >
+                    <Grid container spacing={5} className={classes.img} >
                         <Grid item >
                             <HomeCard name={"Hermes Alves"}
                              img={hermes}
@@ -92,7 +92,7 @@ const Partners: React.FC = () => {
                              img={eduardo}
                              office={"DEVELOPER"}
                              link={'https://www.linkedin.com/in/josebieco/'}
-                             desc={"Um rapaz muito bonito, elegante e educado. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."}/>
+                             desc={"Estudante de engenharia de computação, já atuou na área de suporte técnico de TI e hoje em dia, tem seu foco em desenvolver sistemas e aplicações visando eficiência e praticidade para o cliente."}/>
                         </Grid>
 
                     </Grid>

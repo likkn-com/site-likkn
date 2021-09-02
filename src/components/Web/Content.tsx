@@ -1,51 +1,183 @@
 import React from "react";
 import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
-import CardActionArea from '@material-ui/core/CardActionArea';
-import CardContent from '@material-ui/core/CardContent';
-import CardMedia from '@material-ui/core/CardMedia';
 import Typography from '@material-ui/core/Typography';
 import web_development_img from "../../assets/images/web-development.png";
 import { Grid } from "@material-ui/core";
+import MemoryIcon from '@material-ui/icons/Memory';
+
+import DeveloperBoardIcon from '@material-ui/icons/DeveloperBoard';
+import TouchAppIcon from '@material-ui/icons/TouchApp';
+import StyleIcon from '@material-ui/icons/Style';
+import ForwardIcon from '@material-ui/icons/Forward';
 
 const useStyles = makeStyles({
     root: {
-        // maxWidth: 1060,
-        width: 380,
-        background: '#F2F7FA',
+        flexGrow: 1,
+    },
+    container: {
+        maxWidth: '60%',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        position: 'relative',
+        left: '50%',
+        transform: 'translate(-50%)',
     },
     media: {
         height: 280,
     },
-    grid: {
-        paddingLeft: 10,
-        paddingRight: 10,
-        paddingTop: 10,
-    }
+    background: {
+        background: 'linear-gradient( 160deg, rgba(216,222,228,1), hsla(30, 50%, 95%, 80))',
+    },
+    title: {
+        fontSize: '120%',
+        fontFamily: 'montserrat',
+        fontWeight: 'bold',
+    },
+
+    text: {
+        textAlign: 'justify',
+        fontSize: '100%',
+        fontFamily: 'montserrat',
+        fontWeight: 'bold',
+    },
+
+    img: {
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        alignContent: 'center',
+    },
 });
 
 const Content: React.FC = () => {
     const classes = useStyles();
+
+    function mobileOrDesktop(width: number) {
+        if (width > 780) {
+            return (
+                <div className={classes.container}>
+                    <div className={classes.root}>
+                        <br /><br />
+                        <Typography className={classes.title} paragraph={true}> Sobre os nossos Valores </Typography>
+                        <br />
+                        <Grid container direction="row" justifyContent="center" alignItems="center">
+                            <img src={web_development_img} alt="web_development" width="60%" height="60%" />
+                        </Grid>
+                        <br />
+                        <Card>
+                            <Grid container>
+                                <Grid item xs={4} className={classes.img}>
+                                    <DeveloperBoardIcon style={{ fontSize: '500%' }} />
+                                </Grid>
+                                <Grid item xs={8} >
+                                    <Typography className={classes.title}>Desenvolvimento:</Typography>
+                                    <Typography className={classes.text}>Seja qual for o seu negócio, nós desenvolvemos o site. Utilizamos as mais modernas tecnologias do mercado para proporcionar a melhor experiência aos clientes e usuários.</Typography>
+                                </Grid>
+                            </Grid>
+                        </Card>
+                        <br />
+                        <Card>
+                            <Grid container>
+                                <Grid item xs={4} className={classes.img}>
+                                    <TouchAppIcon style={{ fontSize: '500%' }} />
+                                </Grid>
+                                <Grid item xs={8} >
+                                    <Typography className={classes.title}>User Experience (UX):</Typography>
+                                    <Typography className={classes.text}>Este termo é utilizado para medir toda a relação e experiência do usuário ao utilizar um produto, seja ele qual for. Nós desenvolvemos sites com as melhores experiências digitais para seu negócio através de criação de interfaces, conteúdos e interações.</Typography>
+                                </Grid>
+                            </Grid>
+                        </Card>
+                        <br />
+                        <Card>
+                            <Grid container>
+                                <Grid item xs={4} className={classes.img}>
+                                    <StyleIcon style={{ fontSize: '500%' }} />
+                                </Grid>
+                                <Grid item xs={8} >
+                                    <Typography className={classes.title}>Do seu jeito:</Typography>
+                                    <Typography className={classes.text}>Customizamos o site para o seu negócio. Com a sua participação em todas as etapas de desenvolvimento, garantimos que todas as expectativas sejam atendidas.</Typography>
+                                </Grid>
+                            </Grid>
+                        </Card>
+                        <br />
+                        <Card>
+                            <Grid container>
+                                <Grid item xs={4} className={classes.img}>
+                                    <ForwardIcon style={{ fontSize: '500%' }} />
+                                </Grid>
+                                <Grid item xs={8} >
+                                    <Typography className={classes.title}>Simplificado:</Typography>
+                                    <Typography className={classes.text}>Gerenciamos o domínio, servidores e todos os demais serviços para que você não perca tempo e mantenha o foco apenas em seus negócios.</Typography>
+                                </Grid>
+                            </Grid>
+                        </Card>
+                        <br /><br />
+                    </div>
+                </div>
+            );
+        } else {
+            return (
+                <div className={classes.container}>
+                    <div className={classes.root}>
+                        <br /><br />
+                        <Typography className={classes.title} paragraph={true}> Sobre os nossos Valores </Typography>
+                        <br />
+                        <Grid container direction="row" justifyContent="center" alignItems="center">
+                            <img src={web_development_img} alt="web_development" width="100%" height="100%" />
+                        </Grid>
+                        <br />
+                        <Card>
+                            <Grid item xs className={classes.img}>
+                                <DeveloperBoardIcon style={{ fontSize: '500%' }} />
+                            </Grid>
+                            <Grid item xs >
+                                <Typography className={classes.title}>Desenvolvimento:</Typography>
+                                <Typography className={classes.text}>Seja qual for o seu negócio, nós desenvolvemos o site. Utilizamos as mais modernas tecnologias do mercado para proporcionar a melhor experiência aos clientes e usuários.</Typography>
+                            </Grid>
+                        </Card>
+                        <br />
+                        <Card>
+                            <Grid item xs className={classes.img}>
+                                <TouchAppIcon style={{ fontSize: '500%' }} />
+                            </Grid>
+                            <Grid item xs >
+                                <Typography className={classes.title}>User Experience (UX):</Typography>
+                                <Typography className={classes.text}>Este termo é utilizado para medir toda a relação e experiência do usuário ao utilizar um produto, seja ele qual for. Nós desenvolvemos sites com as melhores experiências digitais para seu negócio através de criação de interfaces, conteúdos e interações.</Typography>
+                            </Grid>
+                        </Card>
+                        <br />
+                        <Card>
+                            <Grid item xs className={classes.img}>
+                                <StyleIcon style={{ fontSize: '500%' }} />
+                            </Grid>
+                            <Grid item xs >
+                                <Typography className={classes.title}>Do seu jeito:</Typography>
+                                <Typography className={classes.text}>Customizamos o site para o seu negócio. Com a sua participação em todas as etapas de desenvolvimento, garantimos que todas as expectativas sejam atendidas.</Typography>
+                            </Grid>
+                        </Card>
+                        <br />
+                        <Card><Grid item xs className={classes.img}>
+                            <ForwardIcon style={{ fontSize: '500%' }} />
+                        </Grid>
+                            <Grid item xs >
+                                <Typography className={classes.title}>Simplificado:</Typography>
+                                <Typography className={classes.text}>Gerenciamos o domínio, servidores e todos os demais serviços para que você não perca tempo e mantenha o foco apenas em seus negócios.</Typography>
+                            </Grid>
+                        </Card>
+                        <br /><br />
+                    </div>
+                </div>
+            );
+        }
+    }
+
+
     return (
-        <Grid container className={classes.grid} direction="row" justifyContent="center" alignItems="center">
-            <Card className={classes.root}>
-                <CardActionArea>
-                    <CardMedia
-                        className={classes.media}
-                        image={web_development_img}
-                        title="Desenvolvimento Web"
-                    />
-                    <CardContent>
-                        <Typography gutterBottom variant="h5" component="h2">
-                            Desenvolvimento Web
-                        </Typography>
-                        <Typography variant="body2" color="textSecondary" component="p">
-                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur aliquam possimus doloribus provident doloremque a in pariatur ex unde, non animi eaque nobis repudiandae praesentium voluptatum enim. Unde, temporibus ullam.
-                        </Typography>
-                    </CardContent>
-                </CardActionArea>
-            </Card>
-        </Grid>
+        <div className={classes.background}>
+            {mobileOrDesktop(window.innerWidth)}
+        </div>
     );
 }
 

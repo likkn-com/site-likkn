@@ -66,7 +66,7 @@ const Lgpd: React.FC = () => {
         <div className={classes.root}>
           <br /><br />
           <Typography className={classes.title} paragraph={true}> Sobre a LGPD </Typography>
-          <br /><br />
+          <br /><br /><br />
           <Grid container spacing={10} className={classes.img}>
             <Container className={classes.services}>
               <IntroCard />

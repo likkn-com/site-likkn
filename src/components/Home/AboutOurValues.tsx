@@ -32,7 +32,6 @@ const useStyles = makeStyles(() =>
             fontSize: '150%',
             fontFamily: 'montserrat',
             fontWeight: 'bold',
-
         },
         titlev2: {
             fontSize: '120%',
@@ -66,7 +65,7 @@ const AboutOurValues: React.FC = () => {
                     <br /><br /><br />
                     <Typography className={classes.title} paragraph={true}> Sobre os nossos Valores </Typography>
                     <br/><br/>
-                    <Grid container spacing={10} className={classes.img}>
+                    <Grid container spacing={5} className={classes.img}>
                         <Grid item xs>
                             <div className={classes.root2}>
                                 <img src={logov2} width="80%" height="80%" alt="logov2" />

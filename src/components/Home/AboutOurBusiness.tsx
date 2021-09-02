@@ -68,7 +68,7 @@ const AboutOurBusiness: React.FC = () => {
           <br />
           <div className={classes.container}>
             <div className={classes.root}>
-              <Grid container spacing={10}>
+              <Grid container spacing={5}>
                 <Grid item xs>
                   <div className={classes.root2}>
                     <Typography className={classes.title} paragraph={true}> Sobre o nosso negócio </Typography>
@@ -85,7 +85,7 @@ const AboutOurBusiness: React.FC = () => {
                 </Grid>
               </Grid>
 
-              <Grid container spacing={10}>
+              <Grid container spacing={5}>
                 <Grid item xs className={classes.img}>
                   <div className={classes.root2}>
                     <img src={sobre} width="100%" height="100%" alt="sobre" />
