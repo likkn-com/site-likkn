@@ -61,6 +61,7 @@ const IntroCard: React.FC = () => {
           privacidade e o livre desenvolvimento da pessoa natural.
         </Typography>
       </CardContent>
+      {/*
       <CardActions className={classes.cardIntroActions}>
           <Button
             disableElevation
@@ -82,6 +83,8 @@ const IntroCard: React.FC = () => {
             Nosso Serviço
           </Button>
       </CardActions>
+      
+      */}
     </Card>
   );
 };
