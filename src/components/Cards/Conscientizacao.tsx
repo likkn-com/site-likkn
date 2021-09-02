@@ -10,7 +10,6 @@ const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     root: {
       maxWidth: 320,
-      minWidth: 320,
       minHeight: 530,
       marginBottom: 15,
     },

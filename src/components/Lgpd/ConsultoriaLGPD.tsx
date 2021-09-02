@@ -18,9 +18,6 @@ const useStyles = makeStyles((theme: Theme) =>
       alignItems: "flex-start",
       justifyContent: "space-around",
     },
-    intro: {
-      maxWidth: "1060px",
-    },
     title: {
       fontSize: '150%',
       fontFamily: 'montserrat',
