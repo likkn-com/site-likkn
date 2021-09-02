@@ -60,7 +60,7 @@ const useStyles = makeStyles((theme: Theme) =>
 
     },
     dialogContent: {
-      maxWidth: 280,
+      maxWidth: 270,
 
     },
     font: {

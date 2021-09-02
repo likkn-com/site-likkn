@@ -17,6 +17,7 @@ const useStyles = makeStyles((theme: Theme) =>
       flexWrap: "wrap",
       alignItems: "flex-start",
       justifyContent: "space-around",
+      padding: '0px',
     },
     title: {
       fontSize: '150%',
@@ -28,22 +29,30 @@ const useStyles = makeStyles((theme: Theme) =>
     },
     container: {
       maxWidth: '60%',
-      display: 'flex',
-      alignItems: 'center',
-      justifyContent: 'center',
       position: 'relative',
       left: '50%',
       transform: 'translate(-50%)',
-    },
-    img: {
       display: 'flex',
       justifyContent: 'center',
       alignItems: 'center'
     },
+    img: {
+      display: 'flex',
+      justifyContent: 'center',
+      alignItems: 'center',
+    },
     root: {
       flexGrow: 1,
-  },
-  
+    },
+    container_title: {
+      maxWidth: '60%',
+      position: 'relative',
+      left: '50%',
+      transform: 'translate(-50%)',
+    },
+    padding: {
+      padding: '0px',
+    }
   })
 );
 
@@ -57,20 +66,18 @@ const ConsultoriaLGPD: React.FC = () => {
           <br /><br />
           <Typography className={classes.title} paragraph={true}> Consultoria LGPD </Typography>
           <br />
-            <Typography variant="body1">
-              Nos possuimos um serviço especializado de consultoria para adequação à
-              LGPD, Com profissionais de ponto o realizando. Veja abaixo os tópicos abordados. Solicite um orçamento para sua
-              empresa.
-            </Typography>
-          <br /><br />
+          <Typography>
+            Nos possuimos um serviço especializado de consultoria para adequação à
+            LGPD, Com profissionais de ponto o realizando. Veja abaixo os tópicos abordados. Solicite um orçamento para sua
+            empresa.
+          </Typography>
+          <br /><br /><br />
           <Grid container spacing={10} className={classes.img}>
-            <Grid item xs>
-              <Container className={classes.services}>
-                <Consultoria />
-                <BoasPraticas />
-                <Conscientizacao />
-              </Container>
-            </Grid>
+            <Container className={classes.services}>
+              <Consultoria />
+              <BoasPraticas />
+              <Conscientizacao />
+            </Container>
           </Grid>
           <br /><br /><br />
         </div>

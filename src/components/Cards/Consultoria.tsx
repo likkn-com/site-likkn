@@ -12,26 +12,8 @@ const useStyles = makeStyles((theme: Theme) =>
       maxWidth: 320,
       marginBottom: 15,
     },
-    media: {
-      height: 200,
-      minHeight: 50,
-      paddingTop: "56.25%", // 16:9
-    },
-    cardIntroActions: {
-      paddingLeft: 16,
-      paddingRight: 16,
-      paddingBottom: 30,
-      justifyContent: "space-around",
-      // marginTop: 30,
-    },
-    margin: {
-      margin: theme.spacing(1),
-    },
-    button: {
-      marginLeft: "0 !important",
-    },
     cardContent: {
-      paddingBottom: 0,
+      minWidth: 270,
     },
     image: {
       display: "flex",
@@ -40,7 +22,6 @@ const useStyles = makeStyles((theme: Theme) =>
     },
     header: {
       height: 65,
-      padding: 15,
     },
   })
 );

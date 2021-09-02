@@ -24,12 +24,9 @@ const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     root: {
       maxWidth: 345,
-      minWidth: 345,
+      minWidth: 270,
       marginBottom: 25,
-    },
-    media: {
-      height: 0,
-      paddingTop: "56.25%", // 16:9
+      minHeight: 670,
     },
     expand: {
       transform: "rotate(0deg)",
@@ -43,16 +40,6 @@ const useStyles = makeStyles((theme: Theme) =>
     },
     margin: {
       margin: theme.spacing(1),
-    },
-    midiaPrincipios1: {
-      height: "270px",
-      backgroundSize: "auto",
-      backgroundPosition: "top",
-    },
-    midiaPrincipios2: {
-      height: "510px",
-      backgroundSize: "auto",
-      backgroundPosition: "top",
     },
     visible: {
       display: "flex",
@@ -108,6 +95,8 @@ const PrincipiosCard: React.FC = () => {
       <Qualidade />
       <Adequacao />
       <Necessidade />
+      <LivreAcesso />
+      <Transparencia />
       {/* <LegitimoInteresse />
       <Contrato />
       <ObrigacaoLegal /> */}
@@ -132,8 +121,7 @@ const PrincipiosCard: React.FC = () => {
       </CardActions>
       <Collapse in={expanded} timeout="auto" unmountOnExit>
       <CardContent className={classes.cardcontent + " " + classes.cardContentExpanded}>
-      <LivreAcesso />
-      <Transparencia />
+      
       <Seguranca />
       <Prevencao />
       <NaoDiscriminacao />

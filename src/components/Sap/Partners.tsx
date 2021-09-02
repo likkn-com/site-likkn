@@ -24,7 +24,7 @@ const useStyles = makeStyles((theme: Theme) =>
             flexGrow: 1,
         },
         root2: {
-            minWidth: 300,
+            minWidth: 270,
         },
 
         background: {

@@ -24,7 +24,8 @@ const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     root: {
       maxWidth: 345,
-      minWidth: 345,
+      minWidth: 270,
+      minHeight: 670,
       marginBottom: 25,
     },
     media: {
@@ -108,6 +109,8 @@ const BasesLegais: React.FC = () => {
       <LegitimoInteresse />
       <Contrato />
       <ObrigacaoLegal />
+      <AdmPublica />
+      <FinsEstudos />
       </CardContent>
       <CardActions
         disableSpacing
@@ -129,8 +132,7 @@ const BasesLegais: React.FC = () => {
       </CardActions>
       <Collapse in={expanded} timeout="auto" unmountOnExit>
       <CardContent className={classes.cardcontent + " " + classes.cardContentExpanded}>
-      <AdmPublica />
-      <FinsEstudos />
+      
       <EsferaProcessual />
       <ProtecaoVida />
       <TutelaSaude />
