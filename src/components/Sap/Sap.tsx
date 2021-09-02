@@ -25,8 +25,8 @@ const Sap: React.FC = () => {
     <div className={classes.root}>
       <Contacts/>
       <Header page={4} />
-      <Banner/>
       <Content/>
+      <Banner/>
       <Partners/>
       <Footer />
     </div>
