@@ -68,6 +68,7 @@ const Content: React.FC = () => {
     return (
         <div className={classes.container}>
             <div className={classes.root}>
+                <br/><br/>
                 <Grid container spacing={10}>
                     <Grid item xs className={classes.img}>
                         <Grid container spacing={10}>
