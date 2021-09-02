@@ -24,7 +24,7 @@ const useStyles = makeStyles((theme: Theme) =>
             flexGrow: 1,
         },
         root2: {
-            minWidth: 270,
+            minWidth: 222,
         },
 
         background: {
@@ -40,8 +40,6 @@ const Partners: React.FC = () => {
             <div className={classes.container}>
                 <br /><br /><br />
                 <div className={classes.root}>
-
-                    <div className={classes.root2}>
                         <Grid item xs={12}>
                             <Typography className={classes.title} paragraph={true} >
                                 <Box >Parceiros</Box>
@@ -68,7 +66,6 @@ const Partners: React.FC = () => {
                             </Grid>
                         </Grid>
                     </div >
-                </div>
                 <br /><br /><br />
             </div>
         </div>
