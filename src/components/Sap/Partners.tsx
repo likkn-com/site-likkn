@@ -49,19 +49,19 @@ const Partners: React.FC = () => {
                         <Grid container spacing={10}>
                             <Grid item xs>
                                 <div className={classes.root2}>
-                                    <img src={parceiros_epi} width="50%" height="50%" alt="epi" />
+                                    <img src={parceiros_epi} width="100%" height="100%" alt="epi" />
                                 </div>
                             </Grid>
 
                             <Grid item xs>
                                 <div className={classes.root2}>
-                                    <img src={parceiros_nexen} width="50%" height="50%" alt="nexen" />
+                                    <img src={parceiros_nexen} width="100%" height="100%" alt="nexen" />
                                 </div>
                             </Grid>
 
                             <Grid item xs>
                                 <div className={classes.root2}>
-                                    <img src={parceiros_cs} width="50%" height="50%" alt="cscorp" />
+                                    <img src={parceiros_cs} width="100%" height="100%" alt="cscorp" />
                                 </div>
                             </Grid>
                         </Grid>

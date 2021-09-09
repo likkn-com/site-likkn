@@ -3,9 +3,12 @@ import Footer from '../Footer/Footer';
 import Header from '../Header/Header';
 import Contacts from '../Contacts/Contacts';
 import { makeStyles, createStyles, Theme } from '@material-ui/core/styles';
-import Content from '../Sap/Content';
+import Consultoria from './Consultoria';
 import Partners from './Partners';
 import Banner from './Banner';
+import NewBanner from './NewBanner';
+import Estimativas from './Estimativas';
+import Content from './Content';
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -26,7 +29,12 @@ const Sap: React.FC = () => {
       <Contacts/>
       <Header page={4} />
       <Content/>
-      <Banner/>
+      {/*
+      <Consultoria/>
+      <Estimativas/>
+      */}
+      {/*<Banner/>*/}
+      <NewBanner/>
       <Partners/>
       <Footer />
     </div>
