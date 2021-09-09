@@ -62,6 +62,8 @@ const useStyles = makeStyles((theme: Theme) =>
     },
     readmore: {
       marginRight: 10,
+      fontFamily: 'montserrat',
+      fontWeight: 'bold',
     },
     cardContentExpanded: {
       paddingTop: 0,
@@ -74,6 +76,20 @@ const useStyles = makeStyles((theme: Theme) =>
       alignItems: "center",
       paddingTop: 0,
       paddingBottom: 0,
+    },
+    header: {
+      fontSize: '150%',
+      fontFamily: 'montserrat',
+      fontWeight: 'bold',
+      textAlign: 'left',
+      padding: '10px',
+    },
+
+    text: {
+      fontSize: '100%',
+      textAlign: 'left',
+      fontFamily: 'montserrat',
+      fontWeight: 'bold',
     },
   })
 );
@@ -89,15 +105,15 @@ const PrincipiosCard: React.FC = () => {
 
   return (
     <Card className={classes.root}>
-      <CardHeader title="Princípios" />
+      <Typography className={classes.header} > Princípios </Typography>
       <CardContent className={classes.cardcontent}>
-      <Finalidade />
-      <Qualidade />
-      <Adequacao />
-      <Necessidade />
-      <LivreAcesso />
-      <Transparencia />
-      {/* <LegitimoInteresse />
+        <Finalidade />
+        <Qualidade />
+        <Adequacao />
+        <Necessidade />
+        <LivreAcesso />
+        <Transparencia />
+        {/* <LegitimoInteresse />
       <Contrato />
       <ObrigacaoLegal /> */}
       </CardContent>
@@ -120,13 +136,13 @@ const PrincipiosCard: React.FC = () => {
         </IconButton>
       </CardActions>
       <Collapse in={expanded} timeout="auto" unmountOnExit>
-      <CardContent className={classes.cardcontent + " " + classes.cardContentExpanded}>
-      
-      <Seguranca />
-      <Prevencao />
-      <NaoDiscriminacao />
-      <Responsabilizacao />
-      </CardContent>
+        <CardContent className={classes.cardcontent + " " + classes.cardContentExpanded}>
+
+          <Seguranca />
+          <Prevencao />
+          <NaoDiscriminacao />
+          <Responsabilizacao />
+        </CardContent>
         <CardActions disableSpacing className={classes.visible2}>
           <Typography className={classes.readmore}>Reduzir</Typography>
           <IconButton

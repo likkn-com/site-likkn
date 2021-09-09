@@ -14,6 +14,7 @@ const useStyles = makeStyles((theme: Theme) =>
     },
     cardContent: {
       minWidth: 270,
+      minHeight: 310,
     },
     image: {
       display: "flex",
@@ -22,6 +23,18 @@ const useStyles = makeStyles((theme: Theme) =>
     },
     header: {
       height: 65,
+      fontSize: '150%',
+      fontFamily: 'montserrat',
+      fontWeight: 'bold',
+      textAlign: 'center',
+      padding: '10px',
+    },
+
+    text: {
+      fontSize: '100%',
+      textAlign: 'center',
+      fontFamily: 'montserrat',
+      fontWeight: 'bold',
     },
   })
 );
@@ -30,12 +43,12 @@ const Consultoria: React.FC = () => {
   const classes = useStyles();
   return (
     <Card className={classes.root}>
-      <CardHeader className={classes.header} titleTypographyProps={{ variant: "h5", align: "center"}} title="Consultoria para proteção de dados" />
+      <Typography className={classes.header} paragraph={true}> Consultoria para proteção de dados </Typography>
       <div className={classes.image}>
         <img src={consultoria} alt="" />
       </div>
       <CardContent className={classes.cardContent}>
-        <Typography variant="body2" align="center">
+        <Typography variant="body2" align="center" className={classes.text}>
         Entender e documentar todos os processos da empresa com a finalidade de identificar quais informações são coletadas, onde são processadas e como são classificadas, afim de inventariá-las de acordo com as leis vigentes e de Segurança da Informação. Como resultado, identificaremos os sistemas que necessitam ser adequados e quais processos precisam ser criados para estar em conformidade com a LGPD.
         </Typography>
       </CardContent>

@@ -64,6 +64,8 @@ const useStyles = makeStyles((theme: Theme) =>
     },
     readmore: {
       marginRight: 10,
+      fontFamily: 'montserrat',
+      fontWeight: 'bold',
     },
     cardContent: {
       paddingTop: 16,
@@ -74,6 +76,20 @@ const useStyles = makeStyles((theme: Theme) =>
     subtitleTypography: {
       color: "#1F9BD7",
       fontWeight: "bold",
+      fontFamily: 'montserrat',
+    },
+    header: {
+      fontSize: '150%',
+      fontFamily: 'montserrat',
+      fontWeight: 'bold',
+      textAlign: 'left',
+      padding: '10px',
+    },
+    text: {
+      fontSize: '100%',
+      textAlign: 'left',
+      fontFamily: 'montserrat',
+      fontWeight: 'bold',
     },
   })
 );
@@ -91,8 +107,8 @@ const ConceitosCard: React.FC = () => {
 
   return (
     <Card className={classes.root}>
-        <CardHeader title="Principais Conceitos" />
-        <CardMedia
+       <Typography className={classes.header} > Principais Conceitos </Typography>
+       <CardMedia
           className={classes.media}
           image={principaisConceitosImg}
           title="Principais Conceitos"
@@ -101,14 +117,14 @@ const ConceitosCard: React.FC = () => {
           <Typography className={classes.subtitleTypography} variant="subtitle1" color="textPrimary" component="p">
             Dados Pessoais
           </Typography>
-          <Typography variant="body2" color="textSecondary" component="p">
+          <Typography variant="body2" color="textSecondary" component="p" className={classes.text}>
             informação relacionada a pessoa natural que permita identificar ou
             tornar uma pessoa identificável;
           </Typography>
           <Typography className={classes.subtitleTypography} variant="subtitle1" color="textPrimary" component="p">
             Dado Pessoal Sensível
           </Typography>
-          <Typography variant="body2" color="textSecondary" component="p">
+          <Typography className={classes.text} variant="body2" color="textSecondary" component="p">
           dado pessoal sobre origem racial ou étnica, convicção religiosa, opinião política, filiação a sindicato ou a organização de caráter religioso, filosófico ou político, dado referente à saúde ou à vida sexual, dado genético ou biométrico, quando vinculado a uma pessoa natural;
           </Typography>
         </CardContent>
@@ -134,13 +150,13 @@ const ConceitosCard: React.FC = () => {
           <Typography className={classes.subtitleTypography} variant="subtitle1" color="textPrimary" component="p">
             Tratamento
           </Typography>
-          <Typography variant="body2" color="textSecondary" component="p">
+          <Typography className={classes.text} variant="body2" color="textSecondary" component="p">
           toda operação realizada com dados pessoais, como as que se referem a coleta, produção, recepção, classificação, utilização, acesso, reprodução, transmissão, distribuição, processamento, arquivamento, armazenamento, eliminação, avaliação ou controle da informação, modificação, comunicação, transferência, difusão ou extração;
           </Typography>
           <Typography className={classes.subtitleTypography} variant="subtitle1" color="textPrimary" component="p">
             Dado Anonimizado
           </Typography>
-          <Typography variant="body2" color="textSecondary" component="p">
+          <Typography className={classes.text} variant="body2" color="textSecondary" component="p">
           dado relativo a titular que não possa ser identificado, considerando a utilização de meios técnicos razoáveis e disponíveis na ocasião de seu tratamento;
           </Typography>
           <CardActions disableSpacing className={classes.visible2}

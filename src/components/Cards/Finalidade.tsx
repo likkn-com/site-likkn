@@ -3,6 +3,7 @@ import { makeStyles, Theme, createStyles } from "@material-ui/core/styles";
 import Card from "@material-ui/core/Card";
 import CardHeader from "@material-ui/core/CardHeader";
 import admpublica from "../../assets/images/admpublica.svg";
+import { Typography } from "@material-ui/core";
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -44,6 +45,9 @@ const useStyles = makeStyles((theme: Theme) =>
     header: {
       height: 50,
       padding: 15,
+      fontFamily: 'montserrat',
+      fontWeight: 'bold',
+      textAlign: "center",
     },
   })
 );
@@ -52,10 +56,7 @@ const Finalidade: React.FC = () => {
   const classes = useStyles();
   return (
     <Card variant="outlined" className={classes.root}>
-      <CardHeader className={classes.header}
-        titleTypographyProps={{ variant: "body2", align: "center" }}
-        title="Finalidade"
-      />
+      <Typography className={classes.header} > Princípios </Typography>
       <div className={classes.image}>
         <img src={admpublica} alt="" />
       </div>

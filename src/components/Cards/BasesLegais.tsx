@@ -76,6 +76,8 @@ const useStyles = makeStyles((theme: Theme) =>
     },
     readmore: {
       marginRight: 10,
+      fontFamily: 'montserrat',
+      fontWeight: 'bold',
     },
     cardContentExpanded: {
       paddingTop: 0,
@@ -88,6 +90,20 @@ const useStyles = makeStyles((theme: Theme) =>
       alignItems: "center",
       paddingTop: 0,
       paddingBottom: 0,
+    },
+    header: {
+      fontSize: '150%',
+      fontFamily: 'montserrat',
+      fontWeight: 'bold',
+      textAlign: 'left',
+      padding: '10px',
+    },
+
+    text: {
+      fontSize: '100%',
+      textAlign: 'left',
+      fontFamily: 'montserrat',
+      fontWeight: 'bold',
     },
   })
 );
@@ -103,7 +119,8 @@ const BasesLegais: React.FC = () => {
 
   return (
     <Card className={classes.root}>
-      <CardHeader title="Bases Legais" />
+      <Typography className={classes.header} > Bases Legais </Typography>
+      
       <CardContent className={classes.cardcontent}>
       <Consentimento />
       <LegitimoInteresse />

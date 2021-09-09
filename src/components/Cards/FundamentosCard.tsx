@@ -19,20 +19,23 @@ const useStyles = makeStyles((theme: Theme) =>
       height: 0,
       paddingTop: "56.25%", // 16:9
     },
-    list: {
-      listStyleType: "square",
-      paddingLeft: "20px",
-      marginTop: 0,
-      marginBottom: 0,
-      fontSize: "1rem",
-      fontFamily: '"Roboto", "Helvetica", "Arial", sans-serif',
-      fontWeight: 400,
-      lineHeight: "1.5",
-      letterSpacing: "0.00938em",
-      color: "rgba(0,0,0,0.87)",
-    },
     margin: {
       margin: theme.spacing(1),
+    },
+    header: {
+      fontSize: '150%',
+      fontFamily: 'montserrat',
+      fontWeight: 'bold',
+      textAlign: 'left',
+      padding: '10px',
+    },
+    text: {
+      fontSize: '100%',
+      textAlign: 'left',
+      fontFamily: 'montserrat',
+      fontWeight: 'bold',
+      marginTop: 0,
+      marginBottom: 0,
     },
   })
 );
@@ -41,15 +44,15 @@ const FundamentosCard: React.FC = () => {
   const classes = useStyles();
   return (
     <Card className={classes.root}>
-        <CardHeader title="Fundamentos" />
+         <Typography className={classes.header} > Fundamentos </Typography>
         <CardMedia
           className={classes.media}
           image={lgpdFundamentosImg}
           title="Fundamentos"
         />
         <CardContent>
-          <Typography variant="body2" color="textSecondary" component="p">
-            <ul className={classes.list}>
+          <Typography className={classes.text} variant="body2" color="textSecondary" component="p">
+            <ul>
               <li>Respeito à privacidade</li>
               <li>Autodeterminação informativa</li>
               <li>Liberdade de expressão, informação, comunicação e opinião</li>

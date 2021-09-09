@@ -15,6 +15,7 @@ const useStyles = makeStyles((theme: Theme) =>
     },
     cardContent: {
       minWidth: 270,
+      minHeight: 310,
     },
     image: {
       display: "flex",
@@ -23,6 +24,18 @@ const useStyles = makeStyles((theme: Theme) =>
     },
     header: {
       height: 65,
+      fontSize: '150%',
+      fontFamily: 'montserrat',
+      fontWeight: 'bold',
+      textAlign: 'center',
+      padding: '10px',
+    },
+
+    text: {
+      fontSize: '100%',
+      textAlign: 'center',
+      fontFamily: 'montserrat',
+      fontWeight: 'bold',
     },
   })
 );
@@ -31,13 +44,13 @@ const BoasPraticas: React.FC = () => {
   const classes = useStyles();
   return (
     <Card className={classes.root}>
-      <CardHeader className={classes.header} titleTypographyProps={{ variant: "h5", align: "center"}} title="Boas Práticas e Governança" />
+      <Typography className={classes.header} paragraph={true}> Boas Práticas e Governança </Typography>
       <div className={classes.image}>
         <img src={boaspraticas} alt="" />
       </div>
       <CardContent className={classes.cardContent}>
-        <Typography variant="body2" align="center">
-        Revisão e elaboração de templates de políticas, normas e procedimentos relativos à privacidade e a proteção de dados pessoais.
+        <Typography variant="body2" align="center" className={classes.text}>
+          Revisão e elaboração de templates de políticas, normas e procedimentos relativos à privacidade e a proteção de dados pessoais.
         </Typography>
       </CardContent>
     </Card>

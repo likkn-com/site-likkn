@@ -1,7 +1,6 @@
 import React from "react";
 import { makeStyles, Theme, createStyles } from "@material-ui/core/styles";
 import Card from "@material-ui/core/Card";
-import CardHeader from "@material-ui/core/CardHeader";
 import CardMedia from "@material-ui/core/CardMedia";
 import CardContent from "@material-ui/core/CardContent";
 import Typography from "@material-ui/core/Typography";
@@ -35,6 +34,20 @@ const useStyles = makeStyles((theme: Theme) =>
     cardContent: {
       paddingBottom: 0,
     },
+
+    header: {
+      fontSize: '150%',
+      fontFamily: 'montserrat',
+      fontWeight: 'bold',
+      textAlign: 'left',
+      padding: '10px',
+    },
+    text: {
+      fontSize: '100%',
+      textAlign: 'left',
+      fontFamily: 'montserrat',
+      fontWeight: 'bold',
+    },
   })
 );
 
@@ -42,14 +55,15 @@ const IntroCard: React.FC = () => {
   const classes = useStyles();
   return (
     <Card className={classes.root}>
-      <CardHeader titleTypographyProps={{ variant: "h5" }} title="Introdução" />
+      <Typography className={classes.header} > Introdução </Typography>
+      
       <CardMedia
         className={classes.media}
         image={lgpdIntroImg}
         title="Introdução"
       />
       <CardContent className={classes.cardContent}>
-        <Typography paragraph>
+        <Typography paragraph className={classes.text}>
           LGPD é a abreviação da Lei 13.709/18 (Lei Geral de Proteção de Dados)
           que foi aprovada em 2018 no governo Michel Temer. Ela dispõe sobre o
           tratamento de dados pessoais, inclusive nos meios digitais, por pessoa

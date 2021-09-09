@@ -3,7 +3,7 @@ import { makeStyles, Theme, createStyles } from "@material-ui/core/styles";
 import Card from "@material-ui/core/Card";
 import CardHeader from "@material-ui/core/CardHeader";
 import prevencao from "../../assets/images/prevencao.svg";
-
+import { Typography } from "@material-ui/core";
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     root: {
@@ -44,6 +44,9 @@ const useStyles = makeStyles((theme: Theme) =>
     header: {
       height: 50,
       padding: 15,
+      fontFamily: 'montserrat',
+      fontWeight: 'bold',
+      textAlign: "center",
     },
   })
 );
@@ -52,10 +55,7 @@ const Prevencao: React.FC = () => {
   const classes = useStyles();
   return (
     <Card variant="outlined" className={classes.root}>
-      <CardHeader className={classes.header}
-        titleTypographyProps={{ variant: "body2", align: "center" }}
-        title="Prevenção"
-      />
+      <Typography className={classes.header} > Prevenção </Typography>
       <div className={classes.image}>
         <img src={prevencao} alt="" />
       </div>
