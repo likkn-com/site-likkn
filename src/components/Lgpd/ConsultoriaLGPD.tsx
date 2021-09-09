@@ -52,7 +52,13 @@ const useStyles = makeStyles((theme: Theme) =>
     },
     padding: {
       padding: '0px',
-    }
+    },
+    text: {
+      fontSize: '100%',
+      textAlign: 'left',
+      fontFamily: 'montserrat',
+      fontWeight: 'bold',
+    },
   })
 );
 
@@ -66,7 +72,7 @@ const ConsultoriaLGPD: React.FC = () => {
           <br /><br />
           <Typography className={classes.title} paragraph={true}> Consultoria LGPD </Typography>
           <br />
-          <Typography>
+          <Typography className={classes.text}>
             Nos possuimos um serviço especializado de consultoria para adequação à
             LGPD, Com profissionais de ponto o realizando. Veja abaixo os tópicos abordados. Solicite um orçamento para sua
             empresa.
