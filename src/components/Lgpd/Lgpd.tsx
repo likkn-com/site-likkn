@@ -1,29 +1,20 @@
 import React from "react";
-import IntroCard from '../Cards/IntroCard';
-import FundamentosCard from '../Cards/FundamentosCard'
-import ConceitosCard from '../Cards/ConceitosCard'
-import PrincipiosCard from '../Cards/PrincipiosCard'
-import BasesLegais from '../Cards/BasesLegais'
+import IntroCard from './IntroCard';
+import FundamentosCard from './FundamentosCard'
+import ConceitosCard from './ConceitosCard'
 import { makeStyles, Theme, createStyles } from "@material-ui/core/styles";
 import Container from "@material-ui/core/Container";
 import Typography from "@material-ui/core/Typography";
 import Grid from "@material-ui/core/Grid";
+import PrinciplesCard from "./PriciplesCard";
+import PrinciplesCardMobile from "./PriciplesCardMobile";
+import LegalBasesCard from "./LegalBasesCard";
+import LegalBasesCardMobile from "./LegalBasesCardMobile";
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
-
-    itens: {
-      display: "flex",
-      maxWidth: "1060px",
-      paddingTop: "20px",
-      // paddingBottom: "20px",
-      flexWrap: "wrap",
-      alignItems: "flex-start",
-      justifyContent: "space-evenly",
-    },
     services: {
       display: "flex",
-      // paddingBottom: "20px",
       flexWrap: "wrap",
       alignItems: "flex-start",
       justifyContent: "space-around",
@@ -54,17 +45,25 @@ const useStyles = makeStyles((theme: Theme) =>
     root: {
       flexGrow: 1,
     },
-    text: {
-      fontSize: '100%',
-      textAlign: 'left',
-      fontFamily: 'montserrat',
-      fontWeight: 'bold',
-  },
   })
 );
 
 const Lgpd: React.FC = () => {
   const classes = useStyles();
+  function mobileOrDesktop(width: number) {
+    if (width > 450) {
+      return <>
+        <PrinciplesCard />
+        <LegalBasesCard />
+      </>
+
+    } else {
+      return <>
+        <PrinciplesCardMobile />
+        <LegalBasesCardMobile />
+      </>
+    }
+  }
 
   return (
     <div className={classes.background}>
@@ -78,8 +77,7 @@ const Lgpd: React.FC = () => {
               <IntroCard />
               <FundamentosCard />
               <ConceitosCard />
-              <PrincipiosCard />
-              <BasesLegais />
+              {mobileOrDesktop(window.innerWidth)}
             </Container>
           </Grid>
           <br /><br /><br />

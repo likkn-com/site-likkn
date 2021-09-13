@@ -80,7 +80,7 @@ const Content: React.FC = () => {
                 <div className={classes.container}>
                     <div className={classes.root}>
                         <br /><br />
-                        <Typography className={classes.titleP} paragraph={true}> Sobre os nossos Valores </Typography>
+                        <Typography className={classes.titleP} paragraph={true}> Web Designer </Typography>
                         <br />
                         <Grid container direction="row" justifyContent="center" alignItems="center">
                             <img src={web_development_img} alt="web_development" width="60%" height="60%" />
